@@ -1,0 +1,28 @@
+@mixin height_width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin border($length, $solid, $color, $border-box) {
+  border: $length $solid $color;
+  box-sizing: $border-box;
+}
+
+@mixin flex($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+.table-Body {
+  @include height_width(100%, 100%);
+  .sub-Container {
+    @include height_width(100%, 100%);
+    @include flex(flex, center, center);
+    padding: 5%;
+    .table-formate {
+      @include border(0.5px, solid, lightgray, border-box);
+      @include height_width(fit-content, 100%);
+    }
+  }
+}

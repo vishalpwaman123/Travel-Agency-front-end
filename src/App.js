@@ -7,7 +7,7 @@ import signIn from "./Components/SignIn/signIn";
 import forgetPassword from "./Components/ForgetPassword/ForgetPassword";
 import resetPassword from "./Components/ResetPassword/ResetPassword";
 import dashBoard from "./Components/Admin/DashBoard/DashBoard";
-import Header from "./Components/Admin/DashBoard/Header/Header";
+import CustomerDashBoard from "./Components/Customer/DashBoard/CustomerDashBoard";
 
 import { Provider } from "react-redux";
 
@@ -22,7 +22,11 @@ function App() {
             <Route exact path="/forgetPassword" component={forgetPassword} />
             <Route exact path="/resetPassword" component={resetPassword} />
             <Route exact path="/adminDashBoard" component={dashBoard} />
-            <Route exact path="/Header" component={Header} />
+            <Route
+              exact
+              path="/CustomerDashBoard"
+              component={CustomerDashBoard}
+            />
           </Provider>
         </Switch>
       </Router>

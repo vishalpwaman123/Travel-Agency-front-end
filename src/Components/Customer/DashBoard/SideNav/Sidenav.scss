@@ -1,0 +1,59 @@
+@mixin height_width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin border($length, $solid, $color, $border-box) {
+  border: $length $solid $color;
+  box-sizing: $border-box;
+}
+
+@mixin flex($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+.sidenav-Container {
+  @include height_width(100%, 100%);
+  .sub-Container {
+    @include height_width(100%, 100%);
+    @include flex(flex, flex-start, center);
+    flex-direction: column;
+    padding-left: 5px;
+
+    .Option1 {
+      @include height_width(10%, 100%);
+      @include flex(flex, center, center);
+      z-index: 1;
+      transition: width 0.2s;
+    }
+    .Option2 {
+      @include height_width(10%, 100%);
+      @include flex(flex, flex-start, center);
+
+      .Menu-withText {
+        @include height_width(100%, 100%);
+        // @include border(0.5px, solid, lightgray, border-box);
+        border-bottom: 0.5px solid rgb(233, 233, 233);
+        
+        @include flex(flex, center, center);
+        .OptionIcon {
+          @include height_width(100%, 20%);
+          @include flex(flex, center, center);
+        }
+
+        .Icon-Text {
+          @include height_width(100%, 70%);
+          @include flex(flex, center, center);
+          font-size: 17px;
+          font-weight: 550;
+        }
+      }
+    }
+  }
+}
+
+.font-family {
+  font-family: Arial, Helvetica, sans-serif;
+}
