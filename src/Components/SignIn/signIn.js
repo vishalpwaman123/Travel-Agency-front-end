@@ -176,7 +176,7 @@ export default class signIn extends React.Component {
             Sign in
           </p>
           <p className="loginSubTitle FT" align="center">
-            Use your LIC Account
+            Use your Travel Account
           </p>
           <div class="Input-Field">
             <div className="textField1">

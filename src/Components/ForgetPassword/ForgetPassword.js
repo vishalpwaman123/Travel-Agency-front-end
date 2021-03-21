@@ -119,13 +119,13 @@ export default class ForgetPassword extends React.Component {
       <div className="forgetMainContainer">
         <div className="loginContainer">
           <div className="loginfundoofont FT" align="center">
-            LIFE INSURANCE CORPORATION
+            TRAVEL SERVICES
           </div>
           <p className="logintitle FT" align="center">
             Forget Password
           </p>
           <p className="loginSubTitle FT" align="center">
-            Use your LIC Account
+            Use your Travel Account
           </p>
           <div class="Input-Field">
             <div className="textField1">

@@ -125,13 +125,13 @@ export default function ResetPassword() {
     <div className="loginMainContainer">
       <div className="loginContainer">
         <div className="loginfundoofont FT" align="center">
-          LIFE INSURANCE CORPORATION
+          TRAVEL SERVICES
         </div>
         <p className="logintitle FT" align="center">
           Reset Password
         </p>
         <p className="loginSubTitle FT" align="center">
-          Use your LIC Account
+          Use your Travel Account
         </p>
         <div class="Input-Field">
           <div className="textField1">
