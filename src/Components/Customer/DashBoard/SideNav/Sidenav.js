@@ -6,6 +6,7 @@ import {
   packageButtonOn,
   customerButtonOn,
   feedbackButtonOn,
+  adddetailButtonOn,
 } from "../../../../Redux";
 
 import FlightTakeoffIcon from "@material-ui/icons/FlightTakeoff";
@@ -26,7 +27,7 @@ function Sidenav() {
               edge="start"
               color="inherit"
               className="OptionIcon"
-              onClick={() => dispatch(packageButtonOn())}
+              onClick={() => dispatch(adddetailButtonOn())}
               aria-label="menu"
             >
               <PersonIcon />
@@ -37,7 +38,7 @@ function Sidenav() {
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(packageButtonOn())}
+                onClick={() => dispatch(adddetailButtonOn())}
                 aria-label="menu"
               >
                 <PersonIcon />

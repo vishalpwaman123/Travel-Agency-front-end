@@ -2,6 +2,7 @@ import { SIDENAVSTATUS } from "./Type";
 import { PACKEGEBUTTONON } from "./Type";
 import { CUSTOMERBUTTONON } from "./Type";
 import { FEEDBACKBUTTONON } from "./Type";
+import { ADDDETAILBUTTONON } from "./Type";
 
 export const sideNavStatus = () => {
   return {
@@ -24,5 +25,11 @@ export const customerButtonOn = () => {
 export const feedbackButtonOn = () => {
   return {
     type: FEEDBACKBUTTONON,
+  };
+};
+
+export const adddetailButtonOn = () => {
+  return {
+    type: ADDDETAILBUTTONON,
   };
 };

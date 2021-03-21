@@ -2,12 +2,14 @@ import { SIDENAVSTATUS } from "./Type";
 import { PACKEGEBUTTONON } from "./Type";
 import { CUSTOMERBUTTONON } from "./Type";
 import { FEEDBACKBUTTONON } from "./Type";
+import { ADDDETAILBUTTONON } from "./Type";
 
 const initialState = {
   MenuStatus: false,
   PackageButtonOn: false,
   CustomerButtonOn: false,
   FeedbackButtonOn: false,
+  AddDetailButtonOn: false,
 };
 
 const travellerreducer = (state = initialState, action) => {
@@ -38,6 +40,15 @@ const travellerreducer = (state = initialState, action) => {
         CustomerButtonOn: false,
         PackageButtonOn: false,
         FeedbackButtonOn: true,
+      };
+
+    case ADDDETAILBUTTONON:
+      return {
+        ...state,
+        CustomerButtonOn: false,
+        PackageButtonOn: false,
+        FeedbackButtonOn: false,
+        AddDetailButtonOn: true,
       };
 
     default:

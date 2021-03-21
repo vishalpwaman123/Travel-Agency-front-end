@@ -2,12 +2,14 @@ import React from "react";
 import "./Body.scss";
 import Table from "./table/Table";
 import Feedback from "./Feedback/Feedback";
+import AddDetail from "./../AddDetail/AddDetail";
 import { useSelector, useDispatch } from "react-redux";
 
 function Body() {
   const PackageButtonOn = useSelector((state) => state.PackageButtonOn);
   const CustomerButtonOn = useSelector((state) => state.CustomerButtonOn);
   const FeedbackButtonOn = useSelector((state) => state.FeedbackButtonOn);
+  const AddDetailButtonOn = useSelector((state) => state.AddDetailButtonOn);
   console.log(PackageButtonOn);
   console.log(CustomerButtonOn);
   console.log(FeedbackButtonOn);
@@ -34,6 +36,10 @@ function Body() {
         ) : FeedbackButtonOn ? (
           <div className="feedback-Button-On">
             <Feedback />
+          </div>
+        ) : AddDetailButtonOn ? (
+          <div className="add-Customer-Detail">
+            <AddDetail />
           </div>
         ) : (
           <div className="default">
