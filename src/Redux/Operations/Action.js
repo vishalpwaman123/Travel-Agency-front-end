@@ -3,6 +3,8 @@ import { PACKEGEBUTTONON } from "./Type";
 import { CUSTOMERBUTTONON } from "./Type";
 import { FEEDBACKBUTTONON } from "./Type";
 import { ADDDETAILBUTTONON } from "./Type";
+import { SHOWALLPACKAGEBUTTONON } from "./Type";
+import { ADDNEWPACKAGEBUTTON } from "./Type";
 
 export const sideNavStatus = () => {
   return {
@@ -33,3 +35,21 @@ export const adddetailButtonOn = () => {
     type: ADDDETAILBUTTONON,
   };
 };
+
+export const showAllPackagesButtonOn = () => {
+  return {
+    type: SHOWALLPACKAGEBUTTONON,
+  };
+};
+
+export const addNewPackageButtonOn = () => {
+  return {
+    type: ADDNEWPACKAGEBUTTON,
+  };
+};
+
+// export const addNewPackageButtonOn = () => {
+//   return {
+//     type: ADDNEWPACKAGEBUTTON,
+//   };
+// };

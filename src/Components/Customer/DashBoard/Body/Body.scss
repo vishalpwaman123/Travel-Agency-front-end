@@ -24,18 +24,7 @@
       @include height_width(100%, 100%);
       @include flex(flex, center, center);
       padding: 2%;
-
-      .display-Packages-Menu {
-        @include height_width(50%, 50%);
-        @include border(0.5px, solid, lightgray, border-box);
-        margin: 2%;
-        border-radius: 10px;
-        .show-All-Packages {
-          @include height_width(100%, 100%);
-          @include flex(flex, center, center);
-          font-size: large;
-        }
-      }
+      background-color: lightgray;
     }
 
     .customer-Button-On {

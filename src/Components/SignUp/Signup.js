@@ -10,9 +10,9 @@ import Radio from "@material-ui/core/Radio";
 import MuiAlert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 
-// import userService from "../../services/userServices";
+import UserService from "../../Services/UserServices";
 
-// const User_service = new userService();
+const User_service = new UserService();
 
 const validEmailRegex = RegExp(
   /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i
@@ -60,7 +60,7 @@ class Signup extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // let flags = this.state.flags;
+
     let errors = this.state.errors;
 
     if (this.state.email == null) {
@@ -74,7 +74,6 @@ class Signup extends React.Component {
     }
 
     if (validateForm(this.state.errors)) {
-      // flags.status = "Success";
       console.info("Valid Form");
 
       if (
@@ -82,7 +81,6 @@ class Signup extends React.Component {
         this.state.password === null ||
         this.state.confirmPassword === null
       ) {
-        // flags.status = "Failed";
         console.error("Invalid Form");
       } else {
         const user = {
@@ -93,19 +91,19 @@ class Signup extends React.Component {
 
         if (this.state.password === this.state.confirmPassword) {
           console.log("Calling Api");
-          //   User_service.Registration(user)
-          //     .then((data) => {
-          //       console.log("Login Data :", data);
-          //       const object = data.data;
-          //       console.log(object.success);
-          //       this.setState({ snackbaropen: true });
-          //       this.setState({ Success: true });
-          //     })
-          //     .catch((error) => {
-          //       console.log(error);
-          //       this.setState({ snackbaropen: true });
-          //       this.setState({ Success: false });
-          //     });
+          User_service.SignUp(user)
+            .then((data) => {
+              console.log("Login Data :", data);
+              const object = data.data;
+              console.log(object.success);
+              this.setState({ snackbaropen: true });
+              this.setState({ Success: true });
+            })
+            .catch((error) => {
+              console.log(error);
+              this.setState({ snackbaropen: true });
+              this.setState({ Success: false });
+            });
         } else {
           this.setState({ snackbaropen: true });
           this.setState({ Success: false });
@@ -151,6 +149,12 @@ class Signup extends React.Component {
     );
   };
 
+  // handleLogOut = () => {
+  //   this.props.Alerthistory.push({
+  //     pathname: "/login",
+  //   });
+  // };
+
   render() {
     const { errors } = this.state;
     return (
@@ -178,7 +182,7 @@ class Signup extends React.Component {
                       fullWidth
                       type="email"
                       name="email"
-                      label="Username"
+                      label="Email Id"
                       InputLabelProps={{ style: { fontSize: 15 } }}
                       id="outlined-size-small"
                       variant="outlined"

@@ -18,16 +18,7 @@ function Body() {
       <div className="sub-Container">
         {PackageButtonOn ? (
           <div className="package-Button-On">
-            <div className="display-Packages-Menu">
-              <div className="show-All-Packages font-family">
-                Show All Packages
-              </div>
-            </div>
-            <div className="display-Packages-Menu">
-              <div className="show-All-Packages font-family">
-                Add New Packages
-              </div>
-            </div>
+            
           </div>
         ) : CustomerButtonOn ? (
           <div className="customer-Button-On">

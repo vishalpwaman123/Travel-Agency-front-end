@@ -8,8 +8,8 @@ import Radio from "@material-ui/core/Radio";
 import MuiAlert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 
-// import userService from "../../services/userServices";
-// const User_service = new userService();
+import userService from "../../Services/UserServices";
+const User_service = new userService();
 
 const validEmailRegex = RegExp(
   /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/
