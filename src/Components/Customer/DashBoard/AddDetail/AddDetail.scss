@@ -1,0 +1,60 @@
+@mixin height_width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin border($length, $solid, $color, $border-box) {
+  border: $length $solid $color;
+  box-sizing: $border-box;
+}
+
+@mixin flex($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+.adddetail-Container {
+  @include height_width(100%, 100%);
+  @include flex(flex, center, center);
+  //   background-color: #f6f6f6;
+  .sub-Container {
+    @include height_width(95%, 90%);
+    // @include border(0.5px, solid, lightgray, border-box);
+    @include flex(flex, none, none);
+    flex-direction: row;
+
+    .detail-Image {
+      @include flex(flex, center, center);
+      flex-direction: column;
+      @include height_width(95%, 40%);
+      .Add-detail {
+        @include height_width(55%, 110%);
+      }
+      .image-Text {
+      }
+    }
+    .detail-All-Input {
+      @include height_width(95%, 60%);
+      .detail-Box {
+        @include height_width(12.5%, 100%);
+        // @include border(0.5px, solid, lightgray, border-box);
+        @include flex(flex, none, none);
+        flex-direction: row;
+        .detail-Box-Text {
+          @include height_width(100%, 30%);
+          @include flex(flex, center, center);
+        }
+        .detail-Box-Input {
+          @include height_width(100%, 70%);
+          @include flex(flex, flex-start, center);
+          .InputField {
+            height: 90%;
+            width: 50%;
+            @include flex(flex, center, center);
+          }
+        }
+      }
+    }
+  }
+}

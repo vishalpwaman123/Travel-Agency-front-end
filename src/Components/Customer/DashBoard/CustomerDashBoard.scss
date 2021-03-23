@@ -29,16 +29,22 @@
 
       .sidenave1 {
         @include height_width(100%, 20%);
-        @include border(0.2px, solid, blue, border-box);
+        @include border(0.2px, solid, lightgray, border-box);
         z-index: 1;
         transition: width 0.3s;
+        -webkit-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+        -moz-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+        box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
       }
 
       .sidenave2 {
         @include height_width(100%, 5%);
-        @include border(0.2px, solid, blue, border-box);
+        @include border(0.2px, solid, lightgray, border-box);
         z-index: 1;
         transition: width 0.5s;
+        -webkit-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+        -moz-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+        box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
       }
 
       .main-Body1 {

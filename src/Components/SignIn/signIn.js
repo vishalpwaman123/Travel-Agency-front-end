@@ -76,59 +76,44 @@ export default class signIn extends React.Component {
 
       if (this.state.email === null || this.state.password === null) {
         console.error("invalid Form");
+      } else {
+        const user = {
+          email: this.state.email,
+          password: this.state.password,
+          account_Type: this.state.accountType,
+        };
+
+        console.log("Calling Api");
+        User_service.SignIn(user)
+          .then((data) => {
+            if (data.status === 200) {
+              console.log(data.data);
+              let id = data.data.data[0].customer_id;
+              this.setState({ snackbaropen: true });
+              this.setState({ Success: true });
+              if (user.account_Type == "Customer") {
+                this.props.history.push({
+                  pathname: "/CustomerDashBoard",
+                  search: "?query=id",
+                  state: { detail: id },
+                });
+              } else if (user.account_Type == "Admin") {
+                this.props.history.push({
+                  pathname: "/adminDashBoard",
+                  search: "?query=id",
+                  state: { detail: id },
+                });
+
+                // this.props.history.push("/AgentDashboaed");
+              }
+            }
+          })
+          .catch((error) => {
+            this.setState({ snackbaropen: true });
+            this.setState({ Success: false });
+            console.log(error);
+          });
       }
-      // else {
-      //   const user = {
-      //     email: this.state.email,
-      //     password: this.state.password,
-      //     account_Type: this.state.accountType,
-      //   };
-
-      //   console.log("Calling Api");
-      //   User_service.login(user)
-      //     .then((data) => {
-      //       if (data.status === 200) {
-      //         console.log(data.data.data[0].customer_id);
-      //         let id = data.data.data[0].customer_id;
-      //         this.setState({ snackbaropen: true });
-      //         this.setState({ Success: true });
-      //         if (user.account_Type == "Customer") {
-      //           this.props.history.push({
-      //             pathname: "/userDashboaed",
-      //             search: "?query=id",
-      //             state: { detail: id },
-      //           });
-      //         } else if (user.account_Type == "Agent") {
-      //           this.props.history.push({
-      //             pathname: "/AgentDashboaed",
-      //             search: "?query=id",
-      //             state: { detail: id },
-      //           });
-
-      //           // this.props.history.push("/AgentDashboaed");
-      //         } else if (user.account_Type == "Manager") {
-      //           this.props.history.push({
-      //             pathname: "/BranchManagerboard",
-      //             search: "?query=id",
-      //             state: { detail: id },
-      //           });
-
-      //           // this.props.history.push("/BranchManagerboard");
-      //         } else {
-      //           this.props.history.push({
-      //             pathname: "/CEODashboaed",
-      //             search: "?query=id",
-      //             state: { detail: id },
-      //           });
-      //         }
-      //       }
-      //     })
-      //     .catch((error) => {
-      //       this.setState({ snackbaropen: true });
-      //       this.setState({ Success: false });
-      //       console.log(error);
-      //     });
-      // }
     } else {
       console.error("Invalid Form");
     }
@@ -185,7 +170,7 @@ export default class signIn extends React.Component {
                 autoComplete="off"
                 className="InputField"
                 type="email"
-                name="email"
+                name="email" 
                 label="Username"
                 id="outlined-size-small"
                 variant="outlined"

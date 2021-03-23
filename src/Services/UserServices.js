@@ -8,9 +8,9 @@ export class UserServices {
     let url = config.SignUp;
     return axiosServices.post(url, data, false);
   }
-  
+
   SignIn(data) {
-    let url = config.SiSignIngnUp;
+    let url = config.SignIn;
     return axiosServices.post(url, data, false);
   }
 }
