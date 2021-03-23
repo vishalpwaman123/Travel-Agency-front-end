@@ -2,6 +2,8 @@ import React from "react";
 import "./Body.scss";
 import Table from "./table/Table";
 import Feedback from "./Feedback/Feedback";
+import ShowPackages from "./Showpackages/ShowPackages.js";
+import PackageDetail from "./PackageDetail/PackageDetail.js";
 import { useSelector, useDispatch } from "react-redux";
 import {
   showAllPackagesButtonOn,
@@ -14,6 +16,7 @@ function Body() {
   const CustomerButtonOn = useSelector((state) => state.CustomerButtonOn);
   const FeedbackButtonOn = useSelector((state) => state.FeedbackButtonOn);
   const AddNewPackageButton = useSelector((state) => state.AddNewPackageButton);
+  const PackageDetailButton = useSelector((state) => state.PackageDetailButton);
   const ShowAllPackagesButtonOn = useSelector(
     (state) => state.ShowAllPackagesButtonOn
   );
@@ -51,9 +54,15 @@ function Body() {
             <Feedback />
           </div>
         ) : ShowAllPackagesButtonOn ? (
-          <div className="Show-All-Packages"></div>
+          <div className="Show-All-Packages">
+            <ShowPackages />
+          </div>
         ) : AddNewPackageButton ? (
           <div className="add-New-Packages"></div>
+        ) : PackageDetailButton ? (
+          <div className="package-Detail-Button">
+            <PackageDetail />
+          </div>
         ) : (
           <div className="default">
             <h1>Welcome To Vishal Travelling Agency</h1>

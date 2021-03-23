@@ -1,0 +1,48 @@
+@mixin height_width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin border($length, $solid, $color, $border-box) {
+  border: $length $solid $color;
+  box-sizing: $border-box;
+}
+
+@mixin flex($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+.showPackages-Container {
+  @include height_width(100%, 100%);
+  .sub-Container {
+    @include height_width(100%, 100%);
+    @include flex(flex, none, none);
+    .Package-display {
+      @include height_width(100%, 100%);
+      @include flex(flex, none, none);
+      // margin: 1%;
+      .Package {
+        margin: 2%;
+        // width: 70%;
+        // height: 70%;
+        flex-wrap: wrap;
+        @include height_width(51%, 50%);
+
+        // .MuiPaper-root .MuiCard-root .MuiPaper-elevation1 .MuiPaper-rounded {
+        // //   @include height_width(60%, 100%);
+        // }
+
+        .MuiCardMedia-root {
+          height: 150px;
+          width: 100%;
+          background-size: 100%;
+        }
+        .MuiCardContent-root {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

@@ -27,7 +27,8 @@
 
       .display-Packages-Menu {
         @include height_width(50%, 50%);
-        // @include border(0.5px, solid, lightgray, border-box);
+        @include border(0.5px, solid, lightgray, border-box);
+        border-radius: 10px;
         margin: 2%;
 
         .show-All-Packages {
@@ -50,6 +51,10 @@
     }
 
     .feedback-Button-On {
+      @include height_width(100%, 100%);
+    }
+
+    .package-Detail-Button {
       @include height_width(100%, 100%);
     }
 

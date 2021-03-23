@@ -46,9 +46,9 @@ function PackageDetail() {
           <div className="Buy-Button">
             {/* <div className="Text"></div> */}
             {/* <div className="Output"></div> */}
-            <Button variant="contained" color="secondary">
+            {/* <Button variant="contained" color="secondary">
               Buy
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
