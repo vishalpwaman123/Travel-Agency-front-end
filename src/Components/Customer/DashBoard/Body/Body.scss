@@ -23,8 +23,8 @@
     .package-Button-On {
       @include height_width(100%, 100%);
       @include flex(flex, center, center);
-      padding: 2%;
-      background-color: lightgray;
+      // padding: 0%;
+      // background-color: lightgray;
     }
 
     .customer-Button-On {
@@ -36,6 +36,10 @@
     }
 
     .add-Customer-Detail {
+      @include height_width(100%, 100%);
+    }
+
+    .Open-Package-Detail {
       @include height_width(100%, 100%);
     }
 

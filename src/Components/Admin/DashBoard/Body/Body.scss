@@ -23,7 +23,7 @@
     .package-Button-On {
       @include height_width(100%, 100%);
       @include flex(flex, center, center);
-      padding: 2%;
+      // padding: 2%;
 
       .display-Packages-Menu {
         @include height_width(50%, 50%);

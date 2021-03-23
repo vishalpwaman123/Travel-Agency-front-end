@@ -5,6 +5,7 @@ import { FEEDBACKBUTTONON } from "./Type";
 import { ADDDETAILBUTTONON } from "./Type";
 import { SHOWALLPACKAGEBUTTONON } from "./Type";
 import { ADDNEWPACKAGEBUTTON } from "./Type";
+import { PACKAGEDETAILBUTTONON } from "./Type";
 
 export const sideNavStatus = () => {
   return {
@@ -48,8 +49,9 @@ export const addNewPackageButtonOn = () => {
   };
 };
 
-// export const addNewPackageButtonOn = () => {
-//   return {
-//     type: ADDNEWPACKAGEBUTTON,
-//   };
-// };
+export const packageDetailButtonOn = (note) => {
+  return {
+    type: PACKAGEDETAILBUTTONON,
+    data: note,
+  };
+};

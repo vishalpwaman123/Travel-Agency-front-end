@@ -1,24 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Body.scss";
 import Table from "./table/Table";
 import Feedback from "./Feedback/Feedback";
 import AddDetail from "./../AddDetail/AddDetail";
+import ShowPackages from "./Showpackages/ShowPackages";
+import PackageDetail from "./PackageDetail/PackageDetail";
 import { useSelector, useDispatch } from "react-redux";
+import userService from "../../../../Services/UserServices";
+
+const User_service = new userService();
 
 function Body() {
   const PackageButtonOn = useSelector((state) => state.PackageButtonOn);
   const CustomerButtonOn = useSelector((state) => state.CustomerButtonOn);
   const FeedbackButtonOn = useSelector((state) => state.FeedbackButtonOn);
   const AddDetailButtonOn = useSelector((state) => state.AddDetailButtonOn);
+  const PackageDetailButton = useSelector((state) => state.PackageDetailButton);
   console.log(PackageButtonOn);
   console.log(CustomerButtonOn);
   console.log(FeedbackButtonOn);
+
   return (
     <div className="body-Container">
       <div className="sub-Container">
         {PackageButtonOn ? (
           <div className="package-Button-On">
-            
+            <ShowPackages />
           </div>
         ) : CustomerButtonOn ? (
           <div className="customer-Button-On">
@@ -31,6 +38,10 @@ function Body() {
         ) : AddDetailButtonOn ? (
           <div className="add-Customer-Detail">
             <AddDetail />
+          </div>
+        ) : PackageDetailButton ? (
+          <div className="Open-Package-Detail">
+            <PackageDetail />
           </div>
         ) : (
           <div className="default">

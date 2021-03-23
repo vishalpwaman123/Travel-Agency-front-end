@@ -13,6 +13,11 @@ export class UserServices {
     let url = config.SignIn;
     return axiosServices.post(url, data, false);
   }
+
+  GetAllPackeges(data) {
+    let url = config.GetAllPackeges;
+    return axiosServices.get(url, false);
+  }
 }
 
 export default UserServices;

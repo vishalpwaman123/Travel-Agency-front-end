@@ -14,11 +14,50 @@
   align-items: $align-items;
 }
 
-.feedback-Container {
+.customer-Feedback-Container {
   @include height_width(100%, 100%);
+
   .sub-Container {
     @include height_width(100%, 100%);
     @include flex(flex, center, center);
     padding: 5%;
+
+    .package-Images {
+      @include flex(flex, center, center);
+      @include height_width(100%, 40%);
+      background-color: aliceblue;
+      box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+
+      // @include border(0.5px, solid, lightgray, border-box);
+    }
+    .package-Details {
+      @include flex(flex, center, center);
+      flex-direction: column;
+      @include height_width(100%, 60%);
+      background-color: aliceblue;
+      box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+
+      // @include border(0.5px, solid, lightgray, border-box);
+
+      .package-Details-Text {
+        @include height_width(60%, 100%);
+        @include flex(flex, center, center);
+        .feedback-Input {
+          margin: 2%;
+          width: 70%;
+        }
+      }
+
+      .package-Details-button {
+        @include height_width(40%, 100%);
+        @include flex(flex, center, baseline);
+        .feedback-Button {
+        }
+      }
+    }
   }
 }
