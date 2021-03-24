@@ -4,6 +4,8 @@ import Table from "./table/Table";
 import Feedback from "./Feedback/Feedback";
 import ShowPackages from "./Showpackages/ShowPackages.js";
 import PackageDetail from "./PackageDetail/PackageDetail.js";
+import CustomerChoice from "./showCustomers/CustomerChoice.js";
+import AllCustomers from "./showCustomers/AllCustomers.js";
 import { useSelector, useDispatch } from "react-redux";
 import {
   showAllPackagesButtonOn,
@@ -17,6 +19,8 @@ function Body() {
   const FeedbackButtonOn = useSelector((state) => state.FeedbackButtonOn);
   const AddNewPackageButton = useSelector((state) => state.AddNewPackageButton);
   const PackageDetailButton = useSelector((state) => state.PackageDetailButton);
+  const ShowAllCustomer = useSelector((state) => state.ShowAllCustomer);
+
   const ShowAllPackagesButtonOn = useSelector(
     (state) => state.ShowAllPackagesButtonOn
   );
@@ -47,7 +51,7 @@ function Body() {
           </div>
         ) : CustomerButtonOn ? (
           <div className="customer-Button-On">
-            <Table />
+            <CustomerChoice />
           </div>
         ) : FeedbackButtonOn ? (
           <div className="feedback-Button-On">
@@ -62,6 +66,10 @@ function Body() {
         ) : PackageDetailButton ? (
           <div className="package-Detail-Button">
             <PackageDetail />
+          </div>
+        ) : ShowAllCustomer ? (
+          <div className="show-All-Customer">
+            <AllCustomers />
           </div>
         ) : (
           <div className="default">

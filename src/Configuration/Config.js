@@ -2,4 +2,7 @@ module.exports = {
   SignUp: "http://localhost:4000/api/users/SignUp",
   SignIn: "http://localhost:4000/api/users/SignIn",
   GetAllPackeges: "http://localhost:4000/api/users/GetAllPackeges",
+  GetAllCustomers: "http://localhost:4000/api/users/GetAllCustomers",
+  GetUserDetailById: "http://localhost:4000/api/users/GetUserDetailById",
+  addUserDetail: "http://localhost:4000/api/users/addUserDetail",
 };

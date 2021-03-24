@@ -6,6 +6,7 @@ import { ADDDETAILBUTTONON } from "./Type";
 import { SHOWALLPACKAGEBUTTONON } from "./Type";
 import { ADDNEWPACKAGEBUTTON } from "./Type";
 import { PACKAGEDETAILBUTTONON } from "./Type";
+import { SHOWALLCUSTOMERSBUTTON } from "./Type";
 const initialState = {
   MenuStatus: false,
   PackageButtonOn: false,
@@ -16,6 +17,8 @@ const initialState = {
   AddNewPackageButton: false,
   PackageDetailButton: false,
   PackagePassData: null,
+  getPassUserDetail: null,
+  ShowAllCustomer: false,
 };
 
 const travellerreducer = (state = initialState, action) => {
@@ -55,6 +58,7 @@ const travellerreducer = (state = initialState, action) => {
         PackageButtonOn: false,
         FeedbackButtonOn: false,
         AddDetailButtonOn: true,
+        getPassUserDetail: action.data,
       };
 
     case SHOWALLPACKAGEBUTTONON:
@@ -89,6 +93,19 @@ const travellerreducer = (state = initialState, action) => {
         AddNewPackageButton: false,
         PackageDetailButton: true,
         PackagePassData: action.data,
+      };
+
+    case SHOWALLCUSTOMERSBUTTON:
+      return {
+        ...state,
+        CustomerButtonOn: false,
+        PackageButtonOn: false,
+        FeedbackButtonOn: false,
+        AddDetailButtonOn: false,
+        ShowAllPackagesButtonOn: false,
+        AddNewPackageButton: false,
+        PackageDetailButton: false,
+        ShowAllCustomer: true,
       };
 
     default:

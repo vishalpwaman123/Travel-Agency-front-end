@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Sidenav.scss";
 import {
@@ -8,6 +8,8 @@ import {
   feedbackButtonOn,
   adddetailButtonOn,
 } from "../../../../Redux";
+import { useLocation } from "react-router-dom";
+import userService from "../../../../Services/UserServices";
 
 import FlightTakeoffIcon from "@material-ui/icons/FlightTakeoff";
 import IconButton from "@material-ui/core/IconButton";
@@ -16,8 +18,29 @@ import FeedbackIcon from "@material-ui/icons/Feedback";
 import PersonIcon from "@material-ui/icons/Person";
 
 function Sidenav() {
+  const location = useLocation();
   const dispatch = useDispatch();
+  const User_service = new userService();
+  const [getUserDetail, setGetUserDetail] = useState([]);
   const MenuStatus = useSelector((state) => state.MenuStatus);
+
+  useEffect(() => {
+    console.log(location.pathname); // result: '/secondpage'
+    console.log(location.search); // result: '?query=abc'
+    console.log(location.state.detail); // result: 'some_value'
+    const user = {
+      user_id: location.state.detail,
+    };
+    User_service.GetUserDetailById(user)
+      .then((data) => {
+        console.log(data.data.data[0]);
+        setGetUserDetail(data.data.data[0]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },[]);
+  console.log(getUserDetail);
   return (
     <div className="sidenav-Container">
       <div className="sub-Container">
@@ -27,7 +50,7 @@ function Sidenav() {
               edge="start"
               color="inherit"
               className="OptionIcon"
-              onClick={() => dispatch(adddetailButtonOn())}
+              onClick={() => dispatch(adddetailButtonOn(getUserDetail))}
               aria-label="menu"
             >
               <PersonIcon />
@@ -38,7 +61,7 @@ function Sidenav() {
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(adddetailButtonOn())}
+                onClick={() => dispatch(adddetailButtonOn(getUserDetail))}
                 aria-label="menu"
               >
                 <PersonIcon />

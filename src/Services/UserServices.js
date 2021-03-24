@@ -14,9 +14,24 @@ export class UserServices {
     return axiosServices.post(url, data, false);
   }
 
-  GetAllPackeges(data) {
+  GetAllPackeges() {
     let url = config.GetAllPackeges;
     return axiosServices.get(url, false);
+  }
+
+  GetAllCustomers() {
+    let url = config.GetAllCustomers;
+    return axiosServices.get(url, false);
+  }
+
+  GetUserDetailById(data) {
+    let url = config.GetUserDetailById;
+    return axiosServices.post(url, data, false);
+  }
+
+  addUserDetail(data) {
+    let url = config.addUserDetail;
+    return axiosServices.post(url, data, false);
   }
 }
 

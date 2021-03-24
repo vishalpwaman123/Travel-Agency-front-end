@@ -6,6 +6,7 @@ import { ADDDETAILBUTTONON } from "./Type";
 import { SHOWALLPACKAGEBUTTONON } from "./Type";
 import { ADDNEWPACKAGEBUTTON } from "./Type";
 import { PACKAGEDETAILBUTTONON } from "./Type";
+import { SHOWALLCUSTOMERSBUTTON } from "./Type";
 
 export const sideNavStatus = () => {
   return {
@@ -31,9 +32,10 @@ export const feedbackButtonOn = () => {
   };
 };
 
-export const adddetailButtonOn = () => {
+export const adddetailButtonOn = (getUserDetail) => {
   return {
     type: ADDDETAILBUTTONON,
+    data: getUserDetail,
   };
 };
 
@@ -53,5 +55,11 @@ export const packageDetailButtonOn = (note) => {
   return {
     type: PACKAGEDETAILBUTTONON,
     data: note,
+  };
+};
+
+export const showAllCustomerButton = () => {
+  return {
+    type: SHOWALLCUSTOMERSBUTTON,
   };
 };

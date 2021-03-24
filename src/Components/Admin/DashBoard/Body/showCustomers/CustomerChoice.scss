@@ -1,0 +1,37 @@
+@mixin height_width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin border($length, $solid, $color, $border-box) {
+  border: $length $solid $color;
+  box-sizing: $border-box;
+}
+
+@mixin flex($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+.customerChoice-Container {
+  @include height_width(100%, 100%);
+  .sub-Container {
+    @include height_width(100%, 100%);
+    @include flex(flex, center, center);
+    .customer-Type {
+      margin: 5%;
+      border-radius: 10px;
+      @include border(0.5px, solid, lightgray, border-box);
+      @include flex(flex, center, center);
+      font-size: 20px;
+      font-family: Arial, Helvetica;
+      font-weight: 550;
+      @include height_width(40%, 50%);
+    }
+    .customer-Type:hover {
+      box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.99);
+      -webkit-box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.99);
+      -moz-box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.99);
+    }
+  }
+}

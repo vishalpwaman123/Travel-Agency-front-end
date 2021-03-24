@@ -34,26 +34,33 @@
       .image-Text {
       }
     }
-    .detail-All-Input {
-      @include height_width(95%, 60%);
-      .detail-Box {
-        @include height_width(12.5%, 100%);
-        // @include border(0.5px, solid, lightgray, border-box);
-        @include flex(flex, none, none);
-        flex-direction: row;
-        .detail-Box-Text {
-          @include height_width(100%, 30%);
-          @include flex(flex, center, center);
-        }
-        .detail-Box-Input {
-          @include height_width(100%, 70%);
-          @include flex(flex, flex-start, center);
-          .InputField {
-            height: 90%;
-            width: 50%;
+    .operations {
+      @include height_width(100%, 60%);
+      .detail-All-Input {
+        @include height_width(90%, 100%);
+        .detail-Box {
+          @include height_width(12.5%, 100%);
+          // @include border(0.5px, solid, lightgray, border-box);
+          @include flex(flex, none, none);
+          flex-direction: row;
+          .detail-Box-Text {
+            @include height_width(100%, 30%);
             @include flex(flex, center, center);
           }
+          .detail-Box-Input {
+            @include height_width(100%, 70%);
+            @include flex(flex, flex-start, center);
+            .InputField {
+              height: 90%;
+              width: 70%;
+              @include flex(flex, center, center);
+            }
+          }
         }
+      }
+      .submit-Button {
+        @include height_width(10%, 100%);
+        @include flex(flex, flex-end, center);
       }
     }
   }

@@ -58,6 +58,10 @@
       @include height_width(100%, 100%);
     }
 
+    .show-All-Customer {
+      @include height_width(100%, 100%);
+    }
+
     .default {
       @include height_width(100%, 100%);
       @include flex(flex, center, center);
