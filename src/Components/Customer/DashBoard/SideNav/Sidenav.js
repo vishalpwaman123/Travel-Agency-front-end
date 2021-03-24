@@ -39,7 +39,7 @@ function Sidenav() {
       .catch((error) => {
         console.log(error);
       });
-  },[]);
+  }, []);
   console.log(getUserDetail);
   return (
     <div className="sidenav-Container">
@@ -128,7 +128,7 @@ function Sidenav() {
               edge="start"
               color="inherit"
               className="OptionIcon"
-              onClick={() => dispatch(feedbackButtonOn())}
+              onClick={() => dispatch(feedbackButtonOn(getUserDetail))}
               aria-label="menu"
             >
               <FeedbackIcon />
@@ -139,7 +139,7 @@ function Sidenav() {
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(feedbackButtonOn())}
+                onClick={() => dispatch(feedbackButtonOn(getUserDetail))}
                 aria-label="menu"
               >
                 <FeedbackIcon />

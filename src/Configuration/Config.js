@@ -5,4 +5,6 @@ module.exports = {
   GetAllCustomers: "http://localhost:4000/api/users/GetAllCustomers",
   GetUserDetailById: "http://localhost:4000/api/users/GetUserDetailById",
   addUserDetail: "http://localhost:4000/api/users/addUserDetail",
+  SubmitFeedback: "http://localhost:4000/api/users/SubmitFeedback",
+  GetAllFeedBack: "GetAllFeedBack",
 };

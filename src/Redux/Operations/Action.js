@@ -26,9 +26,10 @@ export const customerButtonOn = () => {
   };
 };
 
-export const feedbackButtonOn = () => {
+export const feedbackButtonOn = (getUserDetail) => {
   return {
     type: FEEDBACKBUTTONON,
+    data: getUserDetail,
   };
 };
 

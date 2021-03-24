@@ -33,6 +33,11 @@ export class UserServices {
     let url = config.addUserDetail;
     return axiosServices.post(url, data, false);
   }
+
+  SubmitFeedback(data) {
+    let url = config.SubmitFeedback;
+    return axiosServices.post(url, data, false);
+  }
 }
 
 export default UserServices;

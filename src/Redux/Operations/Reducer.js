@@ -49,6 +49,7 @@ const travellerreducer = (state = initialState, action) => {
         CustomerButtonOn: false,
         PackageButtonOn: false,
         FeedbackButtonOn: true,
+        getPassUserDetail: action.data,
       };
 
     case ADDDETAILBUTTONON:
