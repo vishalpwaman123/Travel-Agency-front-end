@@ -18,7 +18,40 @@
   @include height_width(100%, 100%);
   .sub-Container {
     @include height_width(100%, 100%);
-    @include flex(flex, center, center);
+    @include flex(flex, none, flex-start);
+    flex-wrap: wrap;
     padding: 5%;
+    .feedback {
+      @include border(0.5px, solid, lightgray, border-box);
+      @include height_width(fit-content, 25%);
+      border-radius: 7px;
+      margin: 2.5%;
+      padding: 1%;
+      .name {
+        font-size: 15px;
+        font-weight: 550;
+        @include flex(flex, none, center);
+        margin: 2% 2% 2% 0;
+      }
+
+      .email {
+        font-size: 15px;
+        font-weight: 550;
+        @include flex(flex, none, center);
+        margin: 2% 2% 2% 0;
+      }
+
+      .feedbackdata {
+        font-size: 15px;
+        font-weight: 450;
+        @include flex(flex, none, center);
+        margin: 2% 2% 2% 0;
+      }
+    }
+
+    .feedback:hover {
+      box-shadow: 0 1px 2px 0 rgb(60, 64, 67 / 30%),
+        0 1px 3px 1px rgb(60, 64, 67 / 15%);
+    }
   }
 }

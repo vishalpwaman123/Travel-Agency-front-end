@@ -9,18 +9,18 @@ import FeedbackIcon from "@material-ui/icons/Feedback";
 
 const User_service = new userService();
 function Feedback() {
-    const getPassUserDetail = useSelector((state) => state.getPassUserDetail);
+  const getPassUserDetail = useSelector((state) => state.getPassUserDetail);
   const [feedback, setfeedback] = useState(null);
-  const SubmitFeedback = (event) => {
-    const { value, name } = event.target;
-    if (value == null) {
+  const SubmitFeedback = () => {
+    console.log(feedback);
+    if (feedback == null) {
       console.log("Feedback Not Submitted Bcz Empty.");
     } else {
       console.log("Feedback Not Emplty");
       const user = {
         Customer_Name: getPassUserDetail.userName,
         Customer_Email: getPassUserDetail.email,
-        FeedBack: value,
+        FeedBack: feedback,
       };
       console.log(user);
       User_service.SubmitFeedback(user)
@@ -31,6 +31,15 @@ function Feedback() {
         .catch((error) => {
           console.log(error);
         });
+    }
+  };
+
+  const handleChanges = (event) => {
+    event.preventDefault();
+    const { value, name } = event.target;
+    console.log(value);
+    if (value != null) {
+      setfeedback(value);
     }
   };
   return (
@@ -51,6 +60,7 @@ function Feedback() {
               variant="outlined"
               className="feedback-Input"
               valie={feedback}
+              onChange={handleChanges}
             />
           </div>
           <div className="package-Details-button">

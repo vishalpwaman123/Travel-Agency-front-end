@@ -6,5 +6,6 @@ module.exports = {
   GetUserDetailById: "http://localhost:4000/api/users/GetUserDetailById",
   addUserDetail: "http://localhost:4000/api/users/addUserDetail",
   SubmitFeedback: "http://localhost:4000/api/users/SubmitFeedback",
-  GetAllFeedBack: "GetAllFeedBack",
+  GetAllFeedBack: "http://localhost:4000/api/users/GetAllFeedBack",
+  AddUserFeedBack: "http://localhost:4000/api/users/AddUserFeedBack",
 };

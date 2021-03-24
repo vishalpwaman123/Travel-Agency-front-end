@@ -38,6 +38,16 @@ export class UserServices {
     let url = config.SubmitFeedback;
     return axiosServices.post(url, data, false);
   }
+
+  GetAllFeedBack() {
+    let url = config.GetAllFeedBack;
+    return axiosServices.get(url, false);
+  }
+
+  AddUserFeedBack(data) {
+    let url = config.AddUserFeedBack;
+    return axiosServices.post(url, data, false);
+  }
 }
 
 export default UserServices;
