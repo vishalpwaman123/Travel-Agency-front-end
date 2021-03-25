@@ -75,7 +75,7 @@ function Sidenav() {
               edge="start"
               color="inherit"
               className="OptionIcon"
-              onClick={() => dispatch(packageButtonOn())}
+              onClick={() => dispatch(packageButtonOn(getUserDetail))}
               aria-label="menu"
             >
               <FlightTakeoffIcon />
@@ -86,7 +86,7 @@ function Sidenav() {
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(packageButtonOn())}
+                onClick={() => dispatch(packageButtonOn(getUserDetail))}
                 aria-label="menu"
               >
                 <FlightTakeoffIcon />

@@ -57,6 +57,10 @@ export class UserServices {
     let url = config.GetAllUserByPackages;
     return axiosServices.get(url, false);
   }
+  AddBuyUserPackages(data) {
+    let url = config.AddBuyUserPackages;
+    return axiosServices.post(url, data, false);
+  }
 }
 
 export default UserServices;

@@ -38,14 +38,32 @@ const travellerreducer = (state = initialState, action) => {
       return {
         ...state,
         PackageButtonOn: true,
+        getPassUserDetail: action.data,
+        CustomerButtonOn: false,
+        FeedbackButtonOn: false,
+        AddDetailButtonOn: false,
+        ShowAllPackagesButtonOn: false,
+        AddNewPackageButton: false,
+        PackageDetailButton: false,
+        ShowAllCustomer: false,
+        ShowCustomerBuyPackages: false,
+        buyPackageCustomerList: false,
       };
 
     case CUSTOMERBUTTONON:
       return {
         ...state,
-        CustomerButtonOn: true,
         PackageButtonOn: false,
+        CustomerButtonOn: true,
+
         FeedbackButtonOn: false,
+        AddDetailButtonOn: false,
+        ShowAllPackagesButtonOn: false,
+        AddNewPackageButton: false,
+        PackageDetailButton: false,
+        ShowAllCustomer: false,
+        ShowCustomerBuyPackages: false,
+        buyPackageCustomerList: false,
       };
 
     case FEEDBACKBUTTONON:
@@ -55,6 +73,14 @@ const travellerreducer = (state = initialState, action) => {
         PackageButtonOn: false,
         FeedbackButtonOn: true,
         getPassUserDetail: action.data,
+
+        AddDetailButtonOn: false,
+        ShowAllPackagesButtonOn: false,
+        AddNewPackageButton: false,
+        PackageDetailButton: false,
+        ShowAllCustomer: false,
+        ShowCustomerBuyPackages: false,
+        buyPackageCustomerList: false,
       };
 
     case ADDDETAILBUTTONON:
@@ -65,6 +91,13 @@ const travellerreducer = (state = initialState, action) => {
         FeedbackButtonOn: false,
         AddDetailButtonOn: true,
         getPassUserDetail: action.data,
+
+        ShowAllPackagesButtonOn: false,
+        AddNewPackageButton: false,
+        PackageDetailButton: false,
+        ShowAllCustomer: false,
+        ShowCustomerBuyPackages: false,
+        buyPackageCustomerList: false,
       };
 
     case SHOWALLPACKAGEBUTTONON:
@@ -75,6 +108,12 @@ const travellerreducer = (state = initialState, action) => {
         FeedbackButtonOn: false,
         AddDetailButtonOn: false,
         ShowAllPackagesButtonOn: true,
+
+        AddNewPackageButton: false,
+        PackageDetailButton: false,
+        ShowAllCustomer: false,
+        ShowCustomerBuyPackages: false,
+        buyPackageCustomerList: false,
       };
 
     case ADDNEWPACKAGEBUTTON:
@@ -86,6 +125,11 @@ const travellerreducer = (state = initialState, action) => {
         AddDetailButtonOn: false,
         ShowAllPackagesButtonOn: false,
         AddNewPackageButton: true,
+
+        PackageDetailButton: false,
+        ShowAllCustomer: false,
+        ShowCustomerBuyPackages: false,
+        buyPackageCustomerList: false,
       };
 
     case PACKAGEDETAILBUTTONON:
@@ -99,6 +143,10 @@ const travellerreducer = (state = initialState, action) => {
         AddNewPackageButton: false,
         PackageDetailButton: true,
         PackagePassData: action.data,
+
+        ShowAllCustomer: false,
+        ShowCustomerBuyPackages: false,
+        buyPackageCustomerList: false,
       };
 
     case SHOWALLCUSTOMERSBUTTON:

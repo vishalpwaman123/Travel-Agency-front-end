@@ -19,6 +19,9 @@
     @include height_width(100%, 100%);
     @include flex(flex, flex-start, flex-start);
     .data-Loop {
+      @include flex(flex, flex-start, flex-start);
+      flex-wrap: wrap;
+      flex-direction: row;
       .detail {
         @include height_width(20%, 25%);
         @include border(0.5px, solid, lightgray, border-box);

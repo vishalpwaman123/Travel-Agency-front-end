@@ -15,6 +15,7 @@ const userServices = new User_service();
 
 function ShowBuyPackages() {
   const [buypackageList, setbuypackageList] = useState([]);
+  const [flag, setflag] = useState([]);
   const getPassUserDetail = useSelector((state) => state.getPassUserDetail);
   const user = {
     user_id: getPassUserDetail.user_id,
@@ -25,13 +26,18 @@ function ShowBuyPackages() {
       .then((data) => {
         console.log(data);
         console.log(data.status);
-        if (data.status === 404) {
-          setbuypackageList(null);
+        if (data.status === 200) {
+          console.log("Found Packages");
+          setbuypackageList(data.data.data);
+          setflag(true);
+        } else {
+          console.log("Not Found Packages");
+          setflag(false);
         }
-        setbuypackageList(data.data.data);
       })
       .catch((error) => {
         console.log(error);
+        setflag(false);
       });
   }, []);
 
@@ -65,7 +71,15 @@ function ShowBuyPackages() {
   console.log();
   return (
     <div className="ShowBuyPackages-Body">
-      <div className="sub-Container">{packages}</div>
+      <div className="sub-Container">
+        {flag ? (
+          <div className="Found"> {packages}</div>
+        ) : (
+          <div className="not-Found">
+            <h1>You Not Buy Any Package</h1>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

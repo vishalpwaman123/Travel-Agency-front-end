@@ -28,7 +28,7 @@
         // width: 70%;
         // height: 70%;
         flex-wrap: wrap;
-        @include height_width(51%, 50%);
+        @include height_width(47.5%, 50%);
 
         // .MuiPaper-root .MuiCard-root .MuiPaper-elevation1 .MuiPaper-rounded {
         // //   @include height_width(60%, 100%);
@@ -42,6 +42,10 @@
         .MuiCardContent-root {
           padding: 5px;
         }
+      }
+      .Package:hover {
+        box-shadow: 0 1px 2px 0 rgb(60, 64, 67 / 30%),
+          0 1px 3px 1px rgb(60, 64, 67 / 15%);
       }
     }
   }

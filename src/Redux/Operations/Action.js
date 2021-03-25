@@ -16,9 +16,10 @@ export const sideNavStatus = () => {
   };
 };
 
-export const packageButtonOn = () => {
+export const packageButtonOn = (getUserDetail) => {
   return {
     type: PACKEGEBUTTONON,
+    data: getUserDetail,
   };
 };
 
