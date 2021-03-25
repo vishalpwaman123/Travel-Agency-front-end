@@ -48,6 +48,11 @@ export class UserServices {
     let url = config.AddUserFeedBack;
     return axiosServices.post(url, data, false);
   }
+
+  GetUserBuyPackages(data) {
+    let url = config.GetUserBuyPackages;
+    return axiosServices.post(url, data, false);
+  }
 }
 
 export default UserServices;

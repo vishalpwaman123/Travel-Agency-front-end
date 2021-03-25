@@ -8,4 +8,5 @@ module.exports = {
   SubmitFeedback: "http://localhost:4000/api/users/SubmitFeedback",
   GetAllFeedBack: "http://localhost:4000/api/users/GetAllFeedBack",
   AddUserFeedBack: "http://localhost:4000/api/users/AddUserFeedBack",
+  GetUserBuyPackages: "http://localhost:4000/api/users/GetUserBuyPackages",
 };

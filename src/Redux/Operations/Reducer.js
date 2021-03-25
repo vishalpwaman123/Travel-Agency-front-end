@@ -7,6 +7,8 @@ import { SHOWALLPACKAGEBUTTONON } from "./Type";
 import { ADDNEWPACKAGEBUTTON } from "./Type";
 import { PACKAGEDETAILBUTTONON } from "./Type";
 import { SHOWALLCUSTOMERSBUTTON } from "./Type";
+import { CUSTOMERBUYPACKAGEBUTTON } from "./Type";
+
 const initialState = {
   MenuStatus: false,
   PackageButtonOn: false,
@@ -19,6 +21,7 @@ const initialState = {
   PackagePassData: null,
   getPassUserDetail: null,
   ShowAllCustomer: false,
+  ShowCustomerBuyPackages: false,
 };
 
 const travellerreducer = (state = initialState, action) => {
@@ -107,6 +110,21 @@ const travellerreducer = (state = initialState, action) => {
         AddNewPackageButton: false,
         PackageDetailButton: false,
         ShowAllCustomer: true,
+      };
+
+    case CUSTOMERBUYPACKAGEBUTTON:
+      return {
+        ...state,
+        CustomerButtonOn: false,
+        PackageButtonOn: false,
+        FeedbackButtonOn: false,
+        AddDetailButtonOn: false,
+        ShowAllPackagesButtonOn: false,
+        AddNewPackageButton: false,
+        PackageDetailButton: false,
+        ShowAllCustomer: false,
+        ShowCustomerBuyPackages: true,
+        getPassUserDetail: action.data,
       };
 
     default:

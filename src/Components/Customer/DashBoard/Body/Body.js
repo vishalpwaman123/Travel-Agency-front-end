@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Body.scss";
-import Table from "./table/Table";
+import ShowBuyPackages from "./ShowBuyPackages/ShowBuyPackages";
 import Feedback from "./Feedback/Feedback";
 import AddDetail from "./../AddDetail/AddDetail";
 import ShowPackages from "./Showpackages/ShowPackages";
@@ -16,9 +16,12 @@ function Body() {
   const FeedbackButtonOn = useSelector((state) => state.FeedbackButtonOn);
   const AddDetailButtonOn = useSelector((state) => state.AddDetailButtonOn);
   const PackageDetailButton = useSelector((state) => state.PackageDetailButton);
-  console.log(PackageButtonOn);
-  console.log(CustomerButtonOn);
-  console.log(FeedbackButtonOn);
+  const ShowCustomerBuyPackages = useSelector(
+    (state) => state.ShowCustomerBuyPackages
+  );
+  console.log(ShowCustomerBuyPackages);
+  // console.log(CustomerButtonOn);
+  // console.log(FeedbackButtonOn);
 
   return (
     <div className="body-Container">
@@ -27,9 +30,9 @@ function Body() {
           <div className="package-Button-On">
             <ShowPackages />
           </div>
-        ) : CustomerButtonOn ? (
-          <div className="customer-Button-On">
-            <Table />
+        ) : ShowCustomerBuyPackages ? (
+          <div className="ShowCustomerBuyPackages-Button-On">
+            <ShowBuyPackages />
           </div>
         ) : FeedbackButtonOn ? (
           <div className="feedback-Button-On">

@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Sidenav.scss";
 import {
-  sideNavStatus,
   packageButtonOn,
-  customerButtonOn,
   feedbackButtonOn,
   adddetailButtonOn,
+  CustomerBuyPackageButton,
 } from "../../../../Redux";
 import { useLocation } from "react-router-dom";
 import userService from "../../../../Services/UserServices";
@@ -102,7 +101,7 @@ function Sidenav() {
               edge="start"
               color="inherit"
               className="OptionIcon"
-              onClick={() => dispatch(customerButtonOn())}
+              onClick={() => dispatch(CustomerBuyPackageButton(getUserDetail))}
               aria-label="menu"
             >
               <EmojiPeopleIcon />
@@ -113,7 +112,9 @@ function Sidenav() {
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(customerButtonOn())}
+                onClick={() =>
+                  dispatch(CustomerBuyPackageButton(getUserDetail))
+                }
                 aria-label="menu"
               >
                 <EmojiPeopleIcon />
