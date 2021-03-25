@@ -1,7 +1,10 @@
 import React from "react";
 import "./CustomerChoice.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { showAllCustomerButton } from "../../../../../Redux";
+import {
+  showAllCustomerButton,
+  BuyPackageCustomerListButton,
+} from "../../../../../Redux";
 
 function CustomerChoice() {
   const dispatch = useDispatch();
@@ -17,7 +20,7 @@ function CustomerChoice() {
         </div>
         <div
           className="customer-Type"
-          onClick={() => dispatch(showAllCustomerButton())}
+          onClick={() => dispatch(BuyPackageCustomerListButton())}
         >
           Buy packages Customers
         </div>

@@ -29,9 +29,8 @@
       @include height_width(40%, 50%);
     }
     .customer-Type:hover {
-      box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.99);
-      -webkit-box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.99);
-      -moz-box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.99);
+      box-shadow: 0 1px 2px 0 rgb(60, 64, 67 / 30%),
+        0 1px 3px 1px rgb(60, 64, 67 / 15%);
     }
   }
 }

@@ -8,3 +8,4 @@ export { addNewPackageButtonOn } from "./Operations/Action";
 export { packageDetailButtonOn } from "./Operations/Action";
 export { showAllCustomerButton } from "./Operations/Action";
 export { CustomerBuyPackageButton } from "./Operations/Action";
+export { BuyPackageCustomerListButton } from "./Operations/Action";

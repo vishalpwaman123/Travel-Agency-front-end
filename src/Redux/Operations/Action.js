@@ -8,6 +8,7 @@ import { ADDNEWPACKAGEBUTTON } from "./Type";
 import { PACKAGEDETAILBUTTONON } from "./Type";
 import { SHOWALLCUSTOMERSBUTTON } from "./Type";
 import { CUSTOMERBUYPACKAGEBUTTON } from "./Type";
+import { BUYPACKAGESCUSTOMERLISTBUTTON } from "./Type";
 
 export const sideNavStatus = () => {
   return {
@@ -70,5 +71,11 @@ export const CustomerBuyPackageButton = (data) => {
   return {
     type: CUSTOMERBUYPACKAGEBUTTON,
     data: data,
+  };
+};
+
+export const BuyPackageCustomerListButton = () => {
+  return {
+    type: BUYPACKAGESCUSTOMERLISTBUTTON,
   };
 };

@@ -6,6 +6,7 @@ import ShowPackages from "./Showpackages/ShowPackages.js";
 import PackageDetail from "./PackageDetail/PackageDetail.js";
 import CustomerChoice from "./showCustomers/CustomerChoice.js";
 import AllCustomers from "./showCustomers/AllCustomers.js";
+import ByPackageCustomers from "./showCustomers/ByPackageCustomers.js";
 import { useSelector, useDispatch } from "react-redux";
 import {
   showAllPackagesButtonOn,
@@ -20,7 +21,9 @@ function Body() {
   const AddNewPackageButton = useSelector((state) => state.AddNewPackageButton);
   const PackageDetailButton = useSelector((state) => state.PackageDetailButton);
   const ShowAllCustomer = useSelector((state) => state.ShowAllCustomer);
-
+  const buyPackageCustomerList = useSelector(
+    (state) => state.buyPackageCustomerList
+  );
   const ShowAllPackagesButtonOn = useSelector(
     (state) => state.ShowAllPackagesButtonOn
   );
@@ -70,6 +73,10 @@ function Body() {
         ) : ShowAllCustomer ? (
           <div className="show-All-Customer">
             <AllCustomers />
+          </div>
+        ) : buyPackageCustomerList ? (
+          <div>
+            <ByPackageCustomers />
           </div>
         ) : (
           <div className="default">
