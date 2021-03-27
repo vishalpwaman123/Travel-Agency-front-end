@@ -1,6 +1,6 @@
 import React from "react";
 import "./CustomerChoice.scss";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   showAllCustomerButton,
   BuyPackageCustomerListButton,
@@ -16,13 +16,13 @@ function CustomerChoice() {
           className="customer-Type"
           onClick={() => dispatch(showAllCustomerButton())}
         >
-          All Register Customer
+          <div className="Text">All Register Customer</div>
         </div>
         <div
           className="customer-Type"
           onClick={() => dispatch(BuyPackageCustomerListButton())}
         >
-          Buy packages Customers
+          <div className="Text">Buy packages Customers</div>
         </div>
       </div>
     </div>

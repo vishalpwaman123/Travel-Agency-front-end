@@ -20,11 +20,11 @@
     @include height_width(100%, 100%);
     .header {
       @include height_width(11%, 100%);
-      @include border(0.2px, solid, #c3c4c7, border-box);
+      // @include border(0.2px, solid, #c3c4c7, border-box);
     }
     .main-Container {
       @include height_width(89%, 100%);
-      @include border(0.2px, solid, red, border-box);
+      // @include border(0.2px, solid, red, border-box);
       @include flex(flex, none, none);
 
       .sidenave1 {

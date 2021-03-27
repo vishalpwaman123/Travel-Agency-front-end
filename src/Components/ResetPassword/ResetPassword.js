@@ -10,18 +10,18 @@ import { useHistory } from "react-router-dom";
 import userService from "../../Services/UserServices";
 const User_service = new userService();
 
-const validEmailRegex = RegExp(
-  /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i
-);
+// const validEmailRegex = RegExp(
+//   /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i
+// );
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
 export default function ResetPassword() {
-  const [policiesState, setPoliciesState] = useState(false);
-  const [detailStatus, setDetailStatus] = useState(true);
-  const [buyPoliciesStatus, setBuyPoliciesStatus] = useState(false);
+  // const [policiesState, setPoliciesState] = useState(false);
+  // const [detailStatus, setDetailStatus] = useState(true);
+  // const [buyPoliciesStatus, setBuyPoliciesStatus] = useState(false);
   const [password, setpassword] = useState(null);
   const [confirmpassword, setconfirmpassword] = useState(null);
   const [passworderror, setpassworderror] = useState();
@@ -78,7 +78,7 @@ export default function ResetPassword() {
     if (confirmpassword === null || password === null) {
       console.error("invalid Form");
     } else {
-      if (confirmpassword == password) {
+      if (confirmpassword === password) {
         const user = {
           user_id: customer_id,
           password: password,
@@ -89,7 +89,7 @@ export default function ResetPassword() {
           .then((data) => {
             if (data.status === 200) {
               console.log(data.data.data);
-              let id = data.data.data;
+              // let id = data.data.data;
               setsnackbaropen(true);
               setSuccess(true);
             }
@@ -121,7 +121,7 @@ export default function ResetPassword() {
   };
 
   return (
-    <div className="loginMainContainer">
+    <div className="resetMainContainer">
       <div className="loginContainer">
         <div className="loginfundoofont FT" align="center">
           TRAVEL SERVICES
@@ -151,7 +151,7 @@ export default function ResetPassword() {
               onChange={handleChange}
             />
             <div className="error">
-              {passworderror == "Password Not valid" && (
+              {passworderror === "Password Not valid" && (
                 <span className="errorMessage">{passworderror}</span>
               )}
             </div>
@@ -173,7 +173,7 @@ export default function ResetPassword() {
               onChange={handleChange}
             />
             <div className="error">
-              {confirmpassworderror == "confirm password Not valid" && (
+              {confirmpassworderror === "confirm password Not valid" && (
                 <span className="errorMessage">{confirmpassworderror}</span>
               )}
             </div>

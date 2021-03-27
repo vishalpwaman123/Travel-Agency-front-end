@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AddDetail.scss";
 import personLogo from "../../../../Asserts/Add-Person-Detail.png";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import userService from "../../../../Services/UserServices";
@@ -103,7 +103,7 @@ function AddDetail() {
     <div className="adddetail-Container">
       <div className="sub-Container">
         <div className="detail-Image">
-          <img src={personLogo} className="Add-detail" />
+          <img src={personLogo} alt="" className="Add-detail" />
           <div className="image-Text">Add Personal Detail</div>
         </div>
         <div className="operations">

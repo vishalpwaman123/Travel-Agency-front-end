@@ -7,7 +7,7 @@ import logo from "../../../../../Asserts/ImageNotFound.png";
 
 function AddNewPackage() {
   const userServices = new User_service();
-  const [constImage, setconstImage] = useState(logo);
+  // const [constImage, setconstImage] = useState(logo);
   const [imageInput1, setimageInput1] = useState(logo);
   const [imageInput2, setimageInput2] = useState(logo);
   const [imageInput3, setimageInput3] = useState(logo);
@@ -22,17 +22,17 @@ function AddNewPackage() {
     console.log(name);
     const reader = new FileReader();
     reader.onload = () => {
-      if (reader.readyState == 2) {
-        if (name == "imageInput1") {
+      if (reader.readyState === 2) {
+        if (name === "imageInput1") {
           setimageInput1(reader.result);
           console.log("image input 1");
-        } else if (name == "imageInput2") {
+        } else if (name === "imageInput2") {
           setimageInput2(reader.result);
           console.log("image input 2");
-        } else if (name == "imageInput3") {
+        } else if (name === "imageInput3") {
           setimageInput3(reader.result);
           console.log("image input 3");
-        } else if (name == "imageInput4") {
+        } else if (name === "imageInput4") {
           setimageInput4(reader.result);
           console.log("image input 4");
         }
@@ -62,11 +62,11 @@ function AddNewPackage() {
   };
 
   const handleSubmit = (event) => {
-    if (destination_Name == null) {
+    if (destination_Name === null) {
       setdetailFlag(false);
-    } else if (destination_Decription == null) {
+    } else if (destination_Decription === null) {
       setdetailFlag(false);
-    } else if (price == null) {
+    } else if (price === null) {
       setdetailFlag(false);
     }
 
@@ -126,7 +126,7 @@ function AddNewPackage() {
     //       console.log(error);
     //     });
     // }
-    if (detailFlag == true) {
+    if (detailFlag === true) {
       const user = {
         package_Image1: imageInput1,
         package_Image2: imageInput2,
@@ -149,7 +149,7 @@ function AddNewPackage() {
       console.log("Invalid Form");
     }
 
-    if (detailFlag == false) {
+    if (detailFlag === false) {
       console.log("Invalid Form");
     } else {
     }
@@ -160,7 +160,7 @@ function AddNewPackage() {
         <div className="image-Contain">
           <div className="image1">
             <div className="display">
-              <img src={imageInput1} className="img1" />
+              <img src={imageInput1} alt="" className="img1" />
             </div>
             <input
               type="file"
@@ -173,7 +173,7 @@ function AddNewPackage() {
           <div className="sub-images">
             <div className="image2">
               <div className="display">
-                <img src={imageInput2} className="img1" />
+                <img src={imageInput2} alt="" className="img1" />
               </div>
               <input
                 type="file"
@@ -185,7 +185,7 @@ function AddNewPackage() {
             </div>
             <div className="image3">
               <div className="display">
-                <img src={imageInput3} className="img1" />
+                <img src={imageInput3} alt="" className="img1" />
               </div>
               <input
                 type="file"
@@ -197,7 +197,7 @@ function AddNewPackage() {
             </div>
             <div className="image4">
               <div className="display">
-                <img src={imageInput4} className="img1" />
+                <img src={imageInput4} alt="" className="img1" />
               </div>
               <input
                 type="file"
@@ -242,7 +242,7 @@ function AddNewPackage() {
                 name="destinationDecription"
                 label="Description"
                 id="outlined-multiline-static"
-                label="Multiline"
+                // label="Multiline"
                 multiline
                 rows={4}
                 variant="outlined"

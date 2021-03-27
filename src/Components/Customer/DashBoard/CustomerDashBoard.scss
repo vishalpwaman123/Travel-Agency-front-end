@@ -14,24 +14,25 @@
   align-items: $align-items;
 }
 
-.admin-Dashboard-Container {
+.customer-Dashboard-Container {
   @include height_width(100%, 100%);
   .sub-Container {
     @include height_width(100%, 100%);
+
     .header {
       @include height_width(11%, 100%);
-      @include border(0.2px, solid, #c3c4c7, border-box);
+      // @include border(0.2px, solid, #c3c4c7, border-box);
     }
     .main-Container {
       @include height_width(89%, 100%);
-      @include border(0.2px, solid, red, border-box);
+      // @include border(0.2px, solid, red, border-box);
       @include flex(flex, none, none);
 
       .sidenave1 {
         @include height_width(100%, 20%);
-        @include border(0.2px, solid, lightgray, border-box);
+        // @include border(0.2px, solid, lightgray, border-box);
         z-index: 1;
-        transition: width 0.3s;
+        transition: width 0.1s;
         -webkit-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
         -moz-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
         box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
@@ -39,7 +40,7 @@
 
       .sidenave2 {
         @include height_width(100%, 5%);
-        @include border(0.2px, solid, lightgray, border-box);
+        // @include border(0.2px, solid, lightgray, border-box);
         z-index: 1;
         transition: width 0.5s;
         -webkit-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);

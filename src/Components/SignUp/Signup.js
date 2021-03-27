@@ -92,7 +92,7 @@ class Signup extends React.Component {
         if (this.state.password === this.state.confirmPassword) {
           console.log("Calling Api");
           console.log("Admin Restriction Condition");
-          if (this.state.accountType == "Admin") {
+          if (this.state.accountType === "Admin") {
             User_service.AdminRestriction()
               .then((data) => {
                 console.log(data.status);
@@ -130,19 +130,6 @@ class Signup extends React.Component {
                 this.setState({ Success: false });
               });
           }
-          // User_service.SignUp(user)
-          //   .then((data) => {
-          //     console.log("Login Data :", data);
-          //     const object = data.data;
-          //     console.log(object.success);
-          //     this.setState({ snackbaropen: true });
-          //     this.setState({ Success: true });
-          //   })
-          //   .catch((error) => {
-          //     console.log(error);
-          //     this.setState({ snackbaropen: true });
-          //     this.setState({ Success: false });
-          //   });
         } else {
           this.setState({ snackbaropen: true });
           this.setState({ Success: false });
@@ -181,18 +168,11 @@ class Signup extends React.Component {
   accountTypeHandle = (event) => {
     event.preventDefault(); // checking for error compilation
     const { value } = event.target;
-    // let accountType = this.state.accountType;
     console.log(value);
     this.setState({ accountType: value }, () =>
       console.log(this.state.accountType)
     );
   };
-
-  // handleLogOut = () => {
-  //   this.props.Alerthistory.push({
-  //     pathname: "/login",
-  //   });
-  // };
 
   render() {
     const { errors } = this.state;

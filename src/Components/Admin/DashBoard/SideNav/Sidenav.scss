@@ -36,7 +36,7 @@
         @include height_width(100%, 100%);
         // @include border(0.5px, solid, lightgray, border-box);
         border-bottom: 0.5px solid rgb(233, 233, 233);
-        
+
         @include flex(flex, center, center);
         .OptionIcon {
           @include height_width(100%, 20%);
@@ -49,6 +49,11 @@
           font-size: 17px;
           font-weight: 550;
         }
+      }
+      .Menu-withText:hover {
+        background-color: rgb(196, 240, 255);
+        cursor: pointer;
+        border-radius: 0 25px 25px 0;
       }
     }
   }

@@ -17,20 +17,42 @@
 .header-Container {
   @include height_width(100%, 100%);
   @include flex(flex, center, center);
+
+  @media screen and (max-width: 755px) {
+    height: 100%;
+    width: 100%;
+  }
+
   .sub-Container {
     @include height_width(98%, 100%);
     @include flex(flex, none, center);
-    @include border(0.2px, solid, #c3c4c7, border-box);
+    background-color: rgb(0, 0, 218);
+    @media screen and (max-width: 755px) {
+      height: 98%;
+      width: 100%;
+    }
+    // @include border(0.2px, solid, #c3c4c7, border-box);
     .menu-Icon {
       @include height_width(100%, 5%);
       //   @include border(0.2px, solid, #c3c4c7, border-box);
       @include flex(flex, center, center);
+      color: white;
+      @media screen and (max-width: 755px) {
+        height: 50%;
+        width: 10%;
+      }
     }
     .Header-Text {
       @include height_width(100%, 20%);
       @include flex(flex, flex-start, center);
       font-size: 20px;
       font-weight: 600;
+      color: white;
+      @media screen and (max-width: 755px) {
+        height: 100%;
+        width: 20%;
+        font-size: 10px;
+      }
     }
 
     .Header-Text-DashBoard {
@@ -38,12 +60,36 @@
       @include height_width(100%, 55%);
       font-size: 20px;
       font-weight: 600;
+      color: white;
+      @media screen and (max-width: 755px) {
+        height: 100%;
+        width: 55%;
+        font-size: 10px;
+      }
     }
 
     .Log-out-Button {
       @include flex(flex, flex-end, center);
       @include height_width(100%, 20%);
       padding-right: 5%;
+      @media screen and (max-width: 755px) {
+        height: 100%;
+        width: 20%;
+        padding: 0%;
+      }
+      .MuiButton-label {
+        color: white;
+        @media screen and (max-width: 755px) {
+          // height: 100%;
+          // width: 100%;
+          font-size: 5px;
+          padding: 0px;
+        }
+      }
+      .MuiButton-outlinedSecondary {
+        // color: #f50057;
+        border: 1px solid rgb(255, 255, 255);
+      }
     }
   }
 }

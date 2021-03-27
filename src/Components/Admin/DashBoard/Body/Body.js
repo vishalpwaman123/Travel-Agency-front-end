@@ -1,6 +1,6 @@
 import React from "react";
 import "./Body.scss";
-import Table from "./table/Table";
+// import Table from "./table/Table";
 import Feedback from "./Feedback/Feedback";
 import ShowPackages from "./Showpackages/ShowPackages.js";
 import PackageDetail from "./PackageDetail/PackageDetail.js";
@@ -40,7 +40,7 @@ function Body() {
               <div
                 className="show-All-Packages font-family"
                 onClick={() => dispatch(showAllPackagesButtonOn())}
-              >
+              > 
                 Show All Packages
               </div>
             </div>
@@ -78,7 +78,7 @@ function Body() {
             <AllCustomers />
           </div>
         ) : buyPackageCustomerList ? (
-          <div>
+          <div className="buy-Customer-Packages">
             <ByPackageCustomers />
           </div>
         ) : (

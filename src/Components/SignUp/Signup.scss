@@ -27,6 +27,12 @@
         font-weight: 500;
         height: 10%;
         box-sizing: border-box;
+        @media screen and (max-width: 375px) {
+          // height: 100%;
+          width: 100%;
+          font-size: 22px;
+          font-weight: 700;
+        }
       }
       .textFieldBody {
         height: 90%;
@@ -40,6 +46,10 @@
           display: flex;
           justify-content: none;
           align-items: center;
+          @media screen and (max-width: 375px) {
+            width: 100%;
+            font-size: 15px;
+          }
         }
         .All-Input {
           height: 90%;
@@ -68,6 +78,10 @@
                 height: 20%;
                 width: 100%;
               }
+              @media screen and (max-width: 375px) {
+                width: 100%;
+                height: 30%;
+              }
             }
             .textColumn2 {
               display: flex;
@@ -85,6 +99,10 @@
                   height: 30%;
                   width: 100%;
                 }
+                @media screen and (max-width: 375px) {
+                  width: 100%;
+                  margin: 10px;
+                }
               }
               .textRow2 {
                 font-size: 14px;
@@ -95,6 +113,14 @@
                   height: 30%;
                   width: 100%;
                 }
+                @media screen and (max-width: 375px) {
+                  width: 100%;
+                  margin: 10px;
+                }
+              }
+              @media screen and (max-width: 375px) {
+                width: 100%;
+                flex-direction: column;
               }
             }
             .passwordHint {
@@ -104,6 +130,11 @@
               display: flex;
               justify-content: none;
               align-items: none;
+              @media screen and (max-width: 375px) {
+                width: 100%;
+                margin: 10px;
+                font-size: 10px;
+              }
             }
           }
           .radiobutton {
@@ -111,6 +142,15 @@
             display: flex;
             flex-direction: row;
             .MuiFormGroup-root {
+              flex-direction: row;
+              @media screen and (max-width: 375px) {
+                width: 100%;
+                display: contents;
+              }
+            }
+            @media screen and (max-width: 375px) {
+              width: 100%;
+              margin: 0px;
               flex-direction: row;
             }
           }
@@ -122,13 +162,41 @@
             .button1 {
               .btn {
                 padding: 0px;
+                @media screen and (max-width: 375px) {
+                  // width: 100%;
+                  margin: 0 0 10px 0;
+                }
+              }
+              @media screen and (max-width: 375px) {
+                width: 100%;
+                padding: 0%;
+                margin: 0 0 10px 0;
               }
             }
+            @media screen and (max-width: 375px) {
+              width: 100%;
+              margin: 10px;
+              padding: 0%;
+              flex-direction: column;
+            }
+          }
+          @media screen and (max-width: 375px) {
+            width: 100%;
           }
         }
       }
+      @media screen and (max-width: 375px) {
+        height: 100%;
+        width: 90%;
+        padding: none;
+      }
+    }
+    @media screen and (max-width: 375px) {
+      height: 90%;
+      width: 90%;
     }
   }
+
   .sideImageBox {
     width: 40%;
     height: 100%;
@@ -137,6 +205,7 @@
     align-items: center;
   }
 }
+
 .error {
   color: red;
 }
@@ -148,8 +217,24 @@
 .Font-style {
   font-family: Helvetica;
 }
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 755px)  {
   .mainContainer {
-    width: 50%;
+    width: 100%;
+    height: 700px;
+    // min-height: 400px;
+    // float: none;
+    .sideImageBox {
+      display: none;
+    }
   }
 }
+
+//  @media screen and (max-height: 555px){
+//   .mainContainer {
+//     width: 100%;
+//     height: 629px;
+//     // height: 400px;
+//     // float: none;
+
+//   }
+// }

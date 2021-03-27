@@ -39,6 +39,7 @@ function Sidenav() {
         console.log(error);
       });
   }, []);
+  
   console.log(getUserDetail);
   return (
     <div className="sidenav-Container">
@@ -55,12 +56,15 @@ function Sidenav() {
               <PersonIcon />
             </IconButton>
           ) : (
-            <div class="Menu-withText">
+            <div
+              class="Menu-withText"
+              onClick={() => dispatch(adddetailButtonOn(getUserDetail))}
+            >
               <IconButton
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(adddetailButtonOn(getUserDetail))}
+                // onClick={() => dispatch(adddetailButtonOn(getUserDetail))}
                 aria-label="menu"
               >
                 <PersonIcon />
@@ -81,12 +85,15 @@ function Sidenav() {
               <FlightTakeoffIcon />
             </IconButton>
           ) : (
-            <div class="Menu-withText">
+            <div
+              class="Menu-withText"
+              onClick={() => dispatch(packageButtonOn(getUserDetail))}
+            >
               <IconButton
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(packageButtonOn(getUserDetail))}
+                // onClick={() => dispatch(packageButtonOn(getUserDetail))}
                 aria-label="menu"
               >
                 <FlightTakeoffIcon />
@@ -107,14 +114,17 @@ function Sidenav() {
               <EmojiPeopleIcon />
             </IconButton>
           ) : (
-            <div class="Menu-withText">
+            <div
+              class="Menu-withText"
+              onClick={() => dispatch(CustomerBuyPackageButton(getUserDetail))}
+            >
               <IconButton
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() =>
-                  dispatch(CustomerBuyPackageButton(getUserDetail))
-                }
+                // onClick={() =>
+                //   dispatch(CustomerBuyPackageButton(getUserDetail))
+                // }
                 aria-label="menu"
               >
                 <EmojiPeopleIcon />

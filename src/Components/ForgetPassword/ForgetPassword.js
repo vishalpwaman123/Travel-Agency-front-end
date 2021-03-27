@@ -10,7 +10,7 @@ const User_service = new userService();
 
 const validEmailRegex = RegExp(
   /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i
-);
+); 
 
 const validateForm = (errors) => {
   let valid = true;
@@ -38,12 +38,6 @@ export default class ForgetPassword extends React.Component {
     };
   }
 
-  // resetPasswordRedirect = () => {
-  //   this.props.history.push({
-  //     pathname: "/resetpassword",
-  //   });
-  // };
-
   handleSnackbarClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -65,7 +59,7 @@ export default class ForgetPassword extends React.Component {
       if (this.state.email === null) {
         console.error("invalid Form");
       }
-      // else {
+
       const user = {
         email: this.state.email,
       };

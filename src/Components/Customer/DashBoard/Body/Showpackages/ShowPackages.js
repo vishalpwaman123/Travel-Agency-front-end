@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ShowPackages.scss";
 import userService from "../../../../../Services/UserServices";
 import { packageDetailButtonOn } from "../../../../../Redux/";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";

@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./header.scss";
 import { sideNavStatus } from "../../../../Redux";
 import { useHistory } from "react-router";

@@ -36,7 +36,7 @@ function Feedback() {
 
   const handleChanges = (event) => {
     event.preventDefault();
-    const { value, name } = event.target;
+    const { value} = event.target;
     console.log(value);
     if (value != null) {
       setfeedback(value);
@@ -46,7 +46,7 @@ function Feedback() {
     <div className="customer-Feedback-Container">
       <div className="sub-Container">
         <div className="package-Images">
-          <img src={feedbacklogo} className="feedback-Logo" />
+          <img src={feedbacklogo} alt="" className="feedback-Logo" />
         </div>
         <div className="package-Details">
           <div className="package-Details-Text">

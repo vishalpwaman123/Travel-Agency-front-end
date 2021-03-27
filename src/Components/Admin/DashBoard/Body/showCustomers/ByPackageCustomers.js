@@ -13,7 +13,7 @@ function ByPackageCustomers() {
       .then((data) => {
         console.log(data.data.data);
         console.log(data.status);
-        if (data.status == 200) {
+        if (data.status === 200) {
           console.log("true");
           setflag(true);
           setgetAllBuyPackageData(data.data.data);
@@ -30,7 +30,7 @@ function ByPackageCustomers() {
   const data = getAllBuyPackageData.map((note) => (
     <div className="detail">
       <div className="image">
-        <img src={note.mainImage} className="image" />
+        <img src={note.mainImage} alt="" className="image" />
       </div>
       <div className="user-id">User id : {note.user_id}</div>
       <div className="email">Email Id : {note.email}</div>
@@ -44,7 +44,7 @@ function ByPackageCustomers() {
         {flag ? (
           <div className="data-Loop">{data}</div>
         ) : (
-          <div>
+          <div className="empty-Message">
             <h1>NO One Buy Any Package</h1>
           </div>
         )}

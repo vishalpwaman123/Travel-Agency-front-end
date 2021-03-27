@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Body.scss";
 import ShowBuyPackages from "./ShowBuyPackages/ShowBuyPackages";
 import Feedback from "./Feedback/Feedback";
 import AddDetail from "./../AddDetail/AddDetail";
 import ShowPackages from "./Showpackages/ShowPackages";
 import PackageDetail from "./PackageDetail/PackageDetail";
-import { useSelector, useDispatch } from "react-redux";
-import userService from "../../../../Services/UserServices";
+import { useSelector } from "react-redux";
+// import userService from "../../../../Services/UserServices";
 
-const User_service = new userService();
+// const User_service = new userService();
 
 function Body() {
   const PackageButtonOn = useSelector((state) => state.PackageButtonOn);
-  const CustomerButtonOn = useSelector((state) => state.CustomerButtonOn);
+  // const CustomerButtonOn = useSelector((state) => state.CustomerButtonOn);
   const FeedbackButtonOn = useSelector((state) => state.FeedbackButtonOn);
   const AddDetailButtonOn = useSelector((state) => state.AddDetailButtonOn);
   const PackageDetailButton = useSelector((state) => state.PackageDetailButton);

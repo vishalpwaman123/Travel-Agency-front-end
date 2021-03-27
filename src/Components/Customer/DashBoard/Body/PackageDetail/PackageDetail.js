@@ -1,8 +1,8 @@
 import React from "react";
 import "./PackageDetail.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { CustomerBuyPackageButton } from "../../../../../Redux"
-import User_service from "../../../../../Services/UserServices"
+import { CustomerBuyPackageButton } from "../../../../../Redux";
+import User_service from "../../../../../Services/UserServices";
 import Button from "@material-ui/core/Button";
 
 function PackageDetail() {
@@ -26,7 +26,7 @@ function PackageDetail() {
       .AddBuyUserPackages(user)
       .then((data) => {
         console.log(data.data);
-        dispatch(CustomerBuyPackageButton(getPassUserDetail))
+        dispatch(CustomerBuyPackageButton(getPassUserDetail));
       })
       .catch((error) => {
         console.log(error);
@@ -40,18 +40,34 @@ function PackageDetail() {
         <div className="package-Images">
           <div className="main-Image">
             <div className="image1">
-              <img src={PackagePassData.package_Image1} className="image11" />
+              <img
+                src={PackagePassData.package_Image1}
+                alt=""
+                className="image11"
+              />
             </div>
           </div>
           <div className="sub-Images">
             <div className="image2">
-              <img src={PackagePassData.package_Image2} className="image22" />
+              <img
+                src={PackagePassData.package_Image2}
+                alt=""
+                className="image22"
+              />
             </div>
             <div className="image3">
-              <img src={PackagePassData.package_Image3} className="image33" />
+              <img
+                src={PackagePassData.package_Image3}
+                alt=""
+                className="image33"
+              />
             </div>
             <div className="image4">
-              <img src={PackagePassData.package_Image4} className="image44" />
+              <img
+                src={PackagePassData.package_Image4}
+                alt=""
+                className="image44"
+              />
             </div>
           </div>
         </div>

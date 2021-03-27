@@ -60,7 +60,7 @@ export default class signIn extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    let flags = this.state.flags;
+    // let flags = this.state.flags;
     let errors = this.state.errors;
 
     if (this.state.email === null) {
@@ -91,13 +91,13 @@ export default class signIn extends React.Component {
               let id = data.data.data[0].user_id;
               this.setState({ snackbaropen: true });
               this.setState({ Success: true });
-              if (user.account_Type == "Customer") {
+              if (user.account_Type === "Customer") {
                 this.props.history.push({
                   pathname: "/CustomerDashBoard",
                   search: "?query=id",
                   state: { detail: id },
                 });
-              } else if (user.account_Type == "Admin") {
+              } else if (user.account_Type === "Admin") {
                 this.props.history.push({
                   pathname: "/adminDashBoard",
                   search: "?query=id",
@@ -141,7 +141,7 @@ export default class signIn extends React.Component {
   accountTypeHandle = (event) => {
     event.preventDefault();
     const { value } = event.target;
-    let accountType = this.state.accountType;
+    // let accountType = this.state.accountType;
     console.log(value);
     this.setState({ accountType: value }, () =>
       console.log(this.state.accountType)
@@ -150,7 +150,7 @@ export default class signIn extends React.Component {
 
   render() {
     const { errors } = this.state;
-    const { flags } = this.state;
+    // const { flags } = this.state;
     return (
       <div className="loginMainContainer">
         <div className="loginContainer">
@@ -170,7 +170,7 @@ export default class signIn extends React.Component {
                 autoComplete="off"
                 className="InputField"
                 type="email"
-                name="email" 
+                name="email"
                 label="Username"
                 id="outlined-size-small"
                 variant="outlined"

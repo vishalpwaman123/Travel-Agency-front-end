@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  height: 629px;
+  /* height: 629px; */
+  height: 100%;
   width: 100%;
 }
 

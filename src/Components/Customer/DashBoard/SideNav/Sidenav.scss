@@ -21,7 +21,7 @@
     @include flex(flex, flex-start, center);
     flex-direction: column;
     padding-left: 5px;
-
+    padding-top: 5%;
     .Option1 {
       @include height_width(10%, 100%);
       @include flex(flex, center, center);

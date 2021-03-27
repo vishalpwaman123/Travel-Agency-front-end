@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 
 import "./Sidenav.scss";
 import {
-  sideNavStatus,
   packageButtonOn,
   customerButtonOn,
   feedbackButtonOn,
@@ -15,11 +14,8 @@ import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
 import FeedbackIcon from "@material-ui/icons/Feedback";
 
 function Sidenav() {
-
   const dispatch = useDispatch();
   const MenuStatus = useSelector((state) => state.MenuStatus);
-
- 
 
   return (
     <div className="sidenav-Container">
@@ -36,12 +32,15 @@ function Sidenav() {
               <FlightTakeoffIcon />
             </IconButton>
           ) : (
-            <div class="Menu-withText">
+            <div
+              class="Menu-withText"
+              onClick={() => dispatch(packageButtonOn())}
+            >
               <IconButton
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(packageButtonOn())}
+                // onClick={() => dispatch(packageButtonOn())}
                 aria-label="menu"
               >
                 <FlightTakeoffIcon />
@@ -62,12 +61,15 @@ function Sidenav() {
               <EmojiPeopleIcon />
             </IconButton>
           ) : (
-            <div class="Menu-withText">
+            <div
+              class="Menu-withText"
+              onClick={() => dispatch(customerButtonOn())}
+            >
               <IconButton
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(customerButtonOn())}
+                // onClick={() => dispatch(customerButtonOn())}
                 aria-label="menu"
               >
                 <EmojiPeopleIcon />
@@ -88,12 +90,15 @@ function Sidenav() {
               <FeedbackIcon />
             </IconButton>
           ) : (
-            <div class="Menu-withText">
+            <div
+              class="Menu-withText"
+              onClick={() => dispatch(feedbackButtonOn())}
+            >
               <IconButton
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(feedbackButtonOn())}
+                // onClick={() => dispatch(feedbackButtonOn())}
                 aria-label="menu"
               >
                 <FeedbackIcon />
