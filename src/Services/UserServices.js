@@ -69,6 +69,16 @@ export class UserServices {
     let url = config.AdminRestriction;
     return axiosServices.get(url, false);
   }
+
+  ForgetPassword(data) {
+    let url = config.ForgetPassword;
+    return axiosServices.post(url, data, false);
+  }
+
+  ResetPassword(data) {
+    let url = config.ResetPassword;
+    return axiosServices.post(url, data, false);
+  }
 }
 
 export default UserServices;

@@ -9,6 +9,7 @@ import { PACKAGEDETAILBUTTONON } from "./Type";
 import { SHOWALLCUSTOMERSBUTTON } from "./Type";
 import { CUSTOMERBUYPACKAGEBUTTON } from "./Type";
 import { BUYPACKAGESCUSTOMERLISTBUTTON } from "./Type";
+import { SNACKBARBUTTON } from "./Type";
 
 const initialState = {
   MenuStatus: false,
@@ -24,6 +25,7 @@ const initialState = {
   ShowAllCustomer: false,
   ShowCustomerBuyPackages: false,
   buyPackageCustomerList: false,
+  SnackBarmessage: "",
 };
 
 const travellerreducer = (state = initialState, action) => {
@@ -190,6 +192,12 @@ const travellerreducer = (state = initialState, action) => {
         ShowAllCustomer: false,
         ShowCustomerBuyPackages: true,
         getPassUserDetail: action.data,
+      };
+
+    case SNACKBARBUTTON:
+      return {
+        ...state,
+        SnackBarmessage: action.message,
       };
 
     default:

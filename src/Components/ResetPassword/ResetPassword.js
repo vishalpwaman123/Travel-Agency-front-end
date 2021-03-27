@@ -7,8 +7,8 @@ import Snackbar from "@material-ui/core/Snackbar";
 import { useLocation } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
-// import userService from "../../services/userServices";
-// const User_service = new userService();
+import userService from "../../Services/UserServices";
+const User_service = new userService();
 
 const validEmailRegex = RegExp(
   /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i
@@ -77,35 +77,34 @@ export default function ResetPassword() {
 
     if (confirmpassword === null || password === null) {
       console.error("invalid Form");
-    }
-    // else {
-    //   if (confirmpassword == password) {
-    //     const user = {
-    //       customer_id: customer_id,
-    //       password: password,
-    //     };
+    } else {
+      if (confirmpassword == password) {
+        const user = {
+          user_id: customer_id,
+          password: password,
+        };
 
-    //     console.log("Calling Api");
-    //     User_service.resetPassword(user)
-    //       .then((data) => {
-    //         if (data.status === 200) {
-    //           console.log(data.data.data);
-    //           let id = data.data.data;
-    //           setsnackbaropen(true);
-    //           setSuccess(true);
-    //         }
-    //       })
-    //       .catch((error) => {
-    //         console.log(error);
-    //         setsnackbaropen(true);
-    //         setSuccess(false);
-    //       });
-    //   } else {
-    //     console.error("invalid Form");
-    //     setsnackbaropen(true);
-    //     setSuccess(false);
-    //   }
-    // }
+        console.log("Calling Api");
+        User_service.ResetPassword(user)
+          .then((data) => {
+            if (data.status === 200) {
+              console.log(data.data.data);
+              let id = data.data.data;
+              setsnackbaropen(true);
+              setSuccess(true);
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            setsnackbaropen(true);
+            setSuccess(false);
+          });
+      } else {
+        console.error("invalid Form");
+        setsnackbaropen(true);
+        setSuccess(false);
+      }
+    }
   };
 
   const handleSnackbarClose = (event, reason) => {
@@ -117,7 +116,7 @@ export default function ResetPassword() {
 
   const handleLoginAgain = () => {
     history.push({
-      pathname: "/login",
+      pathname: "/signIn",
     });
   };
 

@@ -13,4 +13,6 @@ module.exports = {
   AddBuyUserPackages: "http://localhost:4000/api/users/AddBuyUserPackages",
   AddNewPackagesDetail: "http://localhost:4000/api/users/AddNewPackagesDetail",
   AdminRestriction: "http://localhost:4000/api/users/AdminRestriction",
+  ForgetPassword: "http://localhost:4000/api/users/ForgetPassword",
+  ResetPassword: "http://localhost:4000/api/users/ResetPassword",
 };

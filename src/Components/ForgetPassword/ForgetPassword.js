@@ -5,8 +5,8 @@ import Button from "@material-ui/core/Button";
 import MuiAlert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 
-// import userService from "../../services/userServices";
-// const User_service = new userService();
+import userService from "../../Services/UserServices.js";
+const User_service = new userService();
 
 const validEmailRegex = RegExp(
   /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i
@@ -66,34 +66,31 @@ export default class ForgetPassword extends React.Component {
         console.error("invalid Form");
       }
       // else {
-      //   const user = {
-      //     email: this.state.email,
-      //   };
+      const user = {
+        email: this.state.email,
+      };
 
-      //   console.log("Calling Api");
-      //   User_service.forgetPassword(user)
-      //     .then((data) => {
-      //       if (data.status === 200) {
-      //         console.log(data.data.data[0]);
-      //         var id = data.data.data[0].customer_id;
-      //         this.setState({ snackbaropen: true });
-      //         this.setState({ Success: true });
+      console.log("Calling Api");
+      User_service.ForgetPassword(user)
+        .then((data) => {
+          if (data.status === 200) {
+            console.log(data.data.data[0]);
+            var id = data.data.data[0].user_id;
+            this.setState({ snackbaropen: true });
+            this.setState({ Success: true });
 
-      //         this.props.history.push({
-      //           pathname: "/resetpassword",
-      //           search: "?query=id",
-      //           state: { detail: id },
-      //         });
-      //       }
-      //     })
-      //     .catch((error) => {
-      //       this.setState({ snackbaropen: true });
-      //       this.setState({ Success: false });
-      //       console.log(error);
-      //     });
-      // }
-    } else {
-      console.error("Invalid Form");
+            this.props.history.push({
+              pathname: "/resetPassword",
+              search: "?query=id",
+              state: { detail: id },
+            });
+          }
+        })
+        .catch((error) => {
+          this.setState({ snackbaropen: true });
+          this.setState({ Success: false });
+          console.log(error);
+        });
     }
   };
 
