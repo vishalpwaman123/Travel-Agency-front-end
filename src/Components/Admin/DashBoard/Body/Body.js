@@ -7,6 +7,7 @@ import PackageDetail from "./PackageDetail/PackageDetail.js";
 import CustomerChoice from "./showCustomers/CustomerChoice.js";
 import AllCustomers from "./showCustomers/AllCustomers.js";
 import ByPackageCustomers from "./showCustomers/ByPackageCustomers.js";
+import AddNewPackage from "./AddNewPackage/AddNewPackage.js";
 import { useSelector, useDispatch } from "react-redux";
 import {
   showAllPackagesButtonOn,
@@ -65,7 +66,9 @@ function Body() {
             <ShowPackages />
           </div>
         ) : AddNewPackageButton ? (
-          <div className="add-New-Packages"></div>
+          <div className="add-New-Packages">
+            <AddNewPackage />
+          </div>
         ) : PackageDetailButton ? (
           <div className="package-Detail-Button">
             <PackageDetail />

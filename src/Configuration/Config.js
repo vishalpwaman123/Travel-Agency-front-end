@@ -11,4 +11,6 @@ module.exports = {
   GetUserBuyPackages: "http://localhost:4000/api/users/GetUserBuyPackages",
   GetAllUserByPackages: "http://localhost:4000/api/users/GetAllUserByPackages",
   AddBuyUserPackages: "http://localhost:4000/api/users/AddBuyUserPackages",
+  AddNewPackagesDetail: "http://localhost:4000/api/users/AddNewPackagesDetail",
+  AdminRestriction: "http://localhost:4000/api/users/AdminRestriction",
 };

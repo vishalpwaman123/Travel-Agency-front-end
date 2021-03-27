@@ -61,6 +61,9 @@
       @include height_width(100%, 100%);
     }
 
+    .add-New-Packages {
+      @include height_width(100%, 100%);
+    }
     .default {
       @include height_width(100%, 100%);
       @include flex(flex, center, center);

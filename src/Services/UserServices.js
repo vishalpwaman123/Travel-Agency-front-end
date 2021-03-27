@@ -61,6 +61,14 @@ export class UserServices {
     let url = config.AddBuyUserPackages;
     return axiosServices.post(url, data, false);
   }
+  AddNewPackagesDetail(data) {
+    let url = config.AddNewPackagesDetail;
+    return axiosServices.post(url, data, false);
+  }
+  AdminRestriction() {
+    let url = config.AdminRestriction;
+    return axiosServices.get(url, false);
+  }
 }
 
 export default UserServices;

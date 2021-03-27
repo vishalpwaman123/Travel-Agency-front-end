@@ -91,19 +91,58 @@ class Signup extends React.Component {
 
         if (this.state.password === this.state.confirmPassword) {
           console.log("Calling Api");
-          User_service.SignUp(user)
-            .then((data) => {
-              console.log("Login Data :", data);
-              const object = data.data;
-              console.log(object.success);
-              this.setState({ snackbaropen: true });
-              this.setState({ Success: true });
-            })
-            .catch((error) => {
-              console.log(error);
-              this.setState({ snackbaropen: true });
-              this.setState({ Success: false });
-            });
+          console.log("Admin Restriction Condition");
+          if (this.state.accountType == "Admin") {
+            User_service.AdminRestriction()
+              .then((data) => {
+                console.log(data.status);
+                User_service.SignUp(user)
+                  .then((data) => {
+                    console.log("Login Data :", data);
+                    const object = data.data;
+                    console.log(object.success);
+                    this.setState({ snackbaropen: true });
+                    this.setState({ Success: true });
+                  })
+                  .catch((error) => {
+                    console.log(error);
+                    this.setState({ snackbaropen: true });
+                    this.setState({ Success: false });
+                  });
+              })
+              .catch((error) => {
+                console.log(error);
+                this.setState({ snackbaropen: true });
+                this.setState({ Success: false });
+              });
+          } else {
+            User_service.SignUp(user)
+              .then((data) => {
+                console.log("Login Data :", data);
+                const object = data.data;
+                console.log(object.success);
+                this.setState({ snackbaropen: true });
+                this.setState({ Success: true });
+              })
+              .catch((error) => {
+                console.log(error);
+                this.setState({ snackbaropen: true });
+                this.setState({ Success: false });
+              });
+          }
+          // User_service.SignUp(user)
+          //   .then((data) => {
+          //     console.log("Login Data :", data);
+          //     const object = data.data;
+          //     console.log(object.success);
+          //     this.setState({ snackbaropen: true });
+          //     this.setState({ Success: true });
+          //   })
+          //   .catch((error) => {
+          //     console.log(error);
+          //     this.setState({ snackbaropen: true });
+          //     this.setState({ Success: false });
+          //   });
         } else {
           this.setState({ snackbaropen: true });
           this.setState({ Success: false });
