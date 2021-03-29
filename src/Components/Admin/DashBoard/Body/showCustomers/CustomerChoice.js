@@ -1,5 +1,5 @@
 import React from "react";
-import "./CustomerChoice.scss";
+import "./CustomerChoice.css";
 import { useDispatch } from "react-redux";
 import {
   showAllCustomerButton,

@@ -1,0 +1,36 @@
+.showPackages-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .showPackages-Container .sub-Container {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: none;
+}
+ .showPackages-Container .sub-Container .Package-display {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: none;
+}
+ .showPackages-Container .sub-Container .Package-display .Package {
+	 margin: 2%;
+	 flex-wrap: wrap;
+	 height: 51%;
+	 width: 50%;
+}
+ .showPackages-Container .sub-Container .Package-display .Package .MuiCardMedia-root {
+	 height: 150px;
+	 width: 100%;
+	 background-size: 100%;
+}
+ .showPackages-Container .sub-Container .Package-display .Package .MuiCardContent-root {
+	 padding: 5px;
+}
+ .showPackages-Container .sub-Container .Package-display .Package:hover {
+	 box-shadow: 0 1px 2px 0 #3c4002, 0 1px 3px 1px #3c4004;
+}
+ 

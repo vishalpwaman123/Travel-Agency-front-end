@@ -1,0 +1,50 @@
+.feedback-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .feedback-Container .sub-Container {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: flex-start;
+	 flex-wrap: wrap;
+	 padding: 5%;
+}
+ .feedback-Container .sub-Container .feedback {
+	 border: 0.5px solid lightgray;
+	 box-sizing: border-box;
+	 height: fit-content;
+	 width: 25%;
+	 border-radius: 7px;
+	 margin: 2.5%;
+	 padding: 1%;
+}
+ .feedback-Container .sub-Container .feedback .name {
+	 font-size: 15px;
+	 font-weight: 550;
+	 display: flex;
+	 justify-content: none;
+	 align-items: center;
+	 margin: 2% 2% 2% 0;
+}
+ .feedback-Container .sub-Container .feedback .email {
+	 font-size: 15px;
+	 font-weight: 550;
+	 display: flex;
+	 justify-content: none;
+	 align-items: center;
+	 margin: 2% 2% 2% 0;
+}
+ .feedback-Container .sub-Container .feedback .feedbackdata {
+	 font-size: 15px;
+	 font-weight: 450;
+	 display: flex;
+	 justify-content: none;
+	 align-items: center;
+	 margin: 2% 2% 2% 0;
+}
+ .feedback-Container .sub-Container .feedback:hover {
+	 box-shadow: 0 1px 2px 0 #3c4002, 0 1px 3px 1px #3c4004;
+}
+ 

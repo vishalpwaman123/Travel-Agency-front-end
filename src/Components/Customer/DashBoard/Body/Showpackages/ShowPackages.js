@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./ShowPackages.scss";
+import "./ShowPackages.css";
 import userService from "../../../../../Services/UserServices";
 import { packageDetailButtonOn } from "../../../../../Redux/";
 import { useDispatch } from "react-redux";

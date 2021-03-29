@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import "./Sidenav.scss";
+import "./Sidenav.css";
 import {
   packageButtonOn,
   customerButtonOn,

@@ -1,5 +1,5 @@
 import React from "react";
-import "./PackageDetail.scss";
+import "./PackageDetail.css";
 import { useSelector } from "react-redux";
 
 // import Button from "@material-ui/core/Button";

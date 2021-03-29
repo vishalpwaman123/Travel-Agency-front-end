@@ -1,0 +1,45 @@
+.ShowBuyPackages-Body {
+	 height: 100%;
+	 width: 100%;
+}
+ .ShowBuyPackages-Body .sub-Container {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: flex-start;
+	 align-items: flex-start;
+	 flex-wrap: wrap;
+	 flex-direction: row;
+	 padding: 5%;
+}
+ .ShowBuyPackages-Body .sub-Container .Found {
+	 display: flex;
+	 justify-content: flex-start;
+	 align-items: flex-start;
+	 flex-wrap: wrap;
+	 flex-direction: row;
+	 height: 100%;
+	 width: 100%;
+}
+ .ShowBuyPackages-Body .sub-Container .Found .Package {
+	 margin: 2%;
+	 flex-wrap: wrap;
+	 height: 51%;
+	 width: 25%;
+}
+ .ShowBuyPackages-Body .sub-Container .Found .Package .MuiCardMedia-root {
+	 height: 150px;
+	 width: 100%;
+	 background-size: 100%;
+}
+ .ShowBuyPackages-Body .sub-Container .Found .Package .MuiCardContent-root {
+	 padding: 5px;
+}
+ .ShowBuyPackages-Body .sub-Container .not-Found {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ 

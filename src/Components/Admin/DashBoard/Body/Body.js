@@ -1,5 +1,5 @@
 import React from "react";
-import "./Body.scss";
+import "./Body.css";
 // import Table from "./table/Table";
 import Feedback from "./Feedback/Feedback";
 import ShowPackages from "./Showpackages/ShowPackages.js";

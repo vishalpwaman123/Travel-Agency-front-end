@@ -1,5 +1,5 @@
 import React from "react";
-import "./Table.scss";
+import "./Table.css";
 
 function Table() {
   return (

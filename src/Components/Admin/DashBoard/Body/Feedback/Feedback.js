@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Feedback.scss";
+import "./Feedback.css";
 import userService from "../../../../../Services/UserServices";
 
 const user_Services = new userService();

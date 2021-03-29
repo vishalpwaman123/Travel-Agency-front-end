@@ -1,0 +1,72 @@
+.adddetail-Container {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .adddetail-Container .sub-Container {
+	 height: 95%;
+	 width: 90%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: none;
+	 flex-direction: row;
+}
+ .adddetail-Container .sub-Container .detail-Image {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+	 height: 95%;
+	 width: 40%;
+}
+ .adddetail-Container .sub-Container .detail-Image .Add-detail {
+	 height: 55%;
+	 width: 110%;
+}
+ .adddetail-Container .sub-Container .operations {
+	 height: 100%;
+	 width: 60%;
+}
+ .adddetail-Container .sub-Container .operations .detail-All-Input {
+	 height: 90%;
+	 width: 100%;
+}
+ .adddetail-Container .sub-Container .operations .detail-All-Input .detail-Box {
+	 height: 12.5%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: none;
+	 flex-direction: row;
+}
+ .adddetail-Container .sub-Container .operations .detail-All-Input .detail-Box .detail-Box-Text {
+	 height: 100%;
+	 width: 30%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .adddetail-Container .sub-Container .operations .detail-All-Input .detail-Box .detail-Box-Input {
+	 height: 100%;
+	 width: 70%;
+	 display: flex;
+	 justify-content: flex-start;
+	 align-items: center;
+}
+ .adddetail-Container .sub-Container .operations .detail-All-Input .detail-Box .detail-Box-Input .InputField {
+	 height: 90%;
+	 width: 70%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .adddetail-Container .sub-Container .operations .submit-Button {
+	 height: 10%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: flex-end;
+	 align-items: center;
+}
+ 

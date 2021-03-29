@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./AllCustomers.scss";
+import "./AllCustomers.css";
 import User_Services from "../../../../../Services/UserServices";
 
 const user_Services = new User_Services();

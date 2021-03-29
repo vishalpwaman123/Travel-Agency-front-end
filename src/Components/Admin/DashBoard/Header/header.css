@@ -1,0 +1,63 @@
+.header-Container {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .header-Container .sub-Container {
+	 height: 98%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: center;
+	 background-color: #0000da;
+	 border: 0.2px solid #c3c4c7;
+	 box-sizing: border-box;
+}
+ .header-Container .sub-Container .menu-Icon {
+	 height: 100%;
+	 width: 5%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 color: white;
+}
+ .header-Container .sub-Container .Header-Text {
+	 height: 100%;
+	 width: 20%;
+	 display: flex;
+	 justify-content: flex-start;
+	 align-items: center;
+	 font-size: 20px;
+	 font-weight: 600;
+	 color: white;
+}
+ .header-Container .sub-Container .Header-Text-DashBoard {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height: 100%;
+	 width: 55%;
+	 font-size: 20px;
+	 font-weight: 600;
+	 color: white;
+}
+ .header-Container .sub-Container .Log-out-Button {
+	 display: flex;
+	 justify-content: flex-end;
+	 align-items: center;
+	 height: 100%;
+	 width: 20%;
+	 padding-right: 5%;
+}
+ .header-Container .sub-Container .Log-out-Button .MuiButton-label {
+	 color: white;
+}
+ .header-Container .sub-Container .Log-out-Button .MuiButton-outlinedSecondary {
+	 border: 1px solid #fff;
+}
+ .font-family {
+	 font-family: Arial, Helvetica, sans-serif;
+}
+ 

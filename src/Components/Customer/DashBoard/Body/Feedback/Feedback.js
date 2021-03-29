@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Feedback.scss";
+import "./Feedback.css";
 import feedbacklogo from "../../../../../Asserts/Feedback.png";
 import userService from "../../../../../Services/UserServices";
 import { useSelector, useDispatch } from "react-redux";

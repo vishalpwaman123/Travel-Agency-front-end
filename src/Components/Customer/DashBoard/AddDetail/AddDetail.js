@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddDetail.scss";
+import "./AddDetail.css";
 import personLogo from "../../../../Asserts/Add-Person-Detail.png";
 import { useSelector } from "react-redux";
 import Button from "@material-ui/core/Button";

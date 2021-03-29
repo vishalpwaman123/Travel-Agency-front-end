@@ -1,0 +1,54 @@
+.customer-Feedback-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .customer-Feedback-Container .sub-Container {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 padding: 5%;
+}
+ .customer-Feedback-Container .sub-Container .package-Images {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height: 100%;
+	 width: 40%;
+	 background-color: aliceblue;
+	 box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+	 -webkit-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+	 -moz-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+}
+ .customer-Feedback-Container .sub-Container .package-Details {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+	 height: 100%;
+	 width: 60%;
+	 background-color: aliceblue;
+	 box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+	 -webkit-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+	 -moz-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.75);
+}
+ .customer-Feedback-Container .sub-Container .package-Details .package-Details-Text {
+	 height: 60%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .customer-Feedback-Container .sub-Container .package-Details .package-Details-Text .feedback-Input {
+	 margin: 2%;
+	 width: 70%;
+}
+ .customer-Feedback-Container .sub-Container .package-Details .package-Details-button {
+	 height: 40%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: baseline;
+}
+ 

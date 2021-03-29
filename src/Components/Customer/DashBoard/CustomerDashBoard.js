@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import "./CustomerDashBoard.scss";
+import "./CustomerDashBoard.css";
 import Header from "./Header/Header.js";
 import Sidenav from "./SideNav/Sidenav";
 import Body from "./Body/Body";

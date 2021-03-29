@@ -1,5 +1,5 @@
 import React from "react";
-import "./PackageDetail.scss";
+import "./PackageDetail.css";
 import { useSelector, useDispatch } from "react-redux";
 import { CustomerBuyPackageButton } from "../../../../../Redux";
 import User_service from "../../../../../Services/UserServices";

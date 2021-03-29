@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import "./Sidenav.scss";
+import "./Sidenav.css";
 import {
   packageButtonOn,
   feedbackButtonOn,

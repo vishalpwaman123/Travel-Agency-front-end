@@ -1,7 +1,7 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import logo from "../../Asserts/TravellingLogo.png";
-import "./Signup.scss";
+import "./Signup.css";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import RadioGroup from "@material-ui/core/RadioGroup";

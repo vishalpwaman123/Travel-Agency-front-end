@@ -1,0 +1,74 @@
+.body-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .package-Button-On {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .body-Container .sub-Container .package-Button-On .display-Packages-Menu {
+	 height: 50%;
+	 width: 50%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 border-radius: 10px;
+	 margin: 2%;
+}
+ .body-Container .sub-Container .package-Button-On .display-Packages-Menu .show-All-Packages {
+	 height: 105%;
+	 width: 50%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 border: 0.5px solid lightgray;
+	 box-sizing: border-box;
+	 font-size: large;
+	 border-radius: 50%;
+}
+ .body-Container .sub-Container .package-Button-On .display-Packages-Menu .show-All-Packages:hover {
+	 box-shadow: 0 1px 2px 0 #3c4002, 0 1px 3px 1px #3c4004;
+	 background-color: lightblue;
+}
+ .body-Container .sub-Container .customer-Button-On {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .feedback-Button-On {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .package-Detail-Button {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .show-All-Customer {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .add-New-Packages {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .buy-Customer-Packages {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .default {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .font-family {
+	 font-family: Arial, Helvetica, sans-serif;
+}
+ 

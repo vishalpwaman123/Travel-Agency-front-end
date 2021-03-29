@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./ShowBuyPackages.scss";
+import "./ShowBuyPackages.css";
 import User_service from "../../../../../Services/UserServices";
 import { useSelector } from "react-redux";
 

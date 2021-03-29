@@ -1,0 +1,51 @@
+.admin-Dashboard-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .admin-Dashboard-Container .sub-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .admin-Dashboard-Container .sub-Container .header {
+	 height: 11%;
+	 width: 100%;
+}
+ .admin-Dashboard-Container .sub-Container .main-Container {
+	 height: 89%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: none;
+}
+ .admin-Dashboard-Container .sub-Container .main-Container .sidenave1 {
+	 height: 100%;
+	 width: 20%;
+	 z-index: 1;
+	 transition: width 0.3s;
+	 -webkit-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+	 -moz-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+	 box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+}
+ .admin-Dashboard-Container .sub-Container .main-Container .sidenave2 {
+	 height: 100%;
+	 width: 5%;
+	 z-index: 1;
+	 transition: width 0.5s;
+	 -webkit-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+	 -moz-box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+	 box-shadow: 5px 0px 6px 0px rgba(50, 50, 50, 0.55);
+}
+ .admin-Dashboard-Container .sub-Container .main-Container .main-Body1 {
+	 z-index: 1;
+	 height: 100%;
+	 width: 80%;
+}
+ .admin-Dashboard-Container .sub-Container .main-Container .main-Body2 {
+	 z-index: 1;
+	 height: 100%;
+	 width: 95%;
+}
+ .font-family {
+	 font-family: Arial, Helvetica, sans-serif;
+}
+ 

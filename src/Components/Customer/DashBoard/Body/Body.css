@@ -1,0 +1,42 @@
+.body-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .package-Button-On {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .body-Container .sub-Container .ShowCustomerBuyPackages-Button-On {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .feedback-Button-On {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .add-Customer-Detail {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .Open-Package-Detail {
+	 height: 100%;
+	 width: 100%;
+}
+ .body-Container .sub-Container .default {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .font-family {
+	 font-family: Arial, Helvetica, sans-serif;
+}
+ 

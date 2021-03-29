@@ -1,5 +1,5 @@
 import React from "react";
-import "./Body.scss";
+import "./Body.css";
 import ShowBuyPackages from "./ShowBuyPackages/ShowBuyPackages";
 import Feedback from "./Feedback/Feedback";
 import AddDetail from "./../AddDetail/AddDetail";
