@@ -6,12 +6,13 @@ import { useSelector, useDispatch } from "react-redux";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import FeedbackIcon from "@material-ui/icons/Feedback";
-import { DefaultButton } from "../../../../../Redux";
+import { packageButtonOn } from "../../../../../Redux";
 
 const User_service = new userService();
 function Feedback() {
   const dispatch = useDispatch();
   const getPassUserDetail = useSelector((state) => state.getPassUserDetail);
+  const getUserDetail = useSelector((state) => state.getUserDetail);
   const [feedback, setfeedback] = useState(null);
   const SubmitFeedback = () => {
     console.log(feedback);
@@ -29,7 +30,7 @@ function Feedback() {
         .then((data) => {
           console.log(data);
           console.log("Feedback Submitted");
-          DefaultButton();
+          dispatch(packageButtonOn(getUserDetail));
         })
         .catch((error) => {
           console.log(error);
