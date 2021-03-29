@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import "./Feedback.scss";
 import feedbacklogo from "../../../../../Asserts/Feedback.png";
 import userService from "../../../../../Services/UserServices";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import FeedbackIcon from "@material-ui/icons/Feedback";
+import { DefaultButton } from "../../../../../Redux";
 
 const User_service = new userService();
 function Feedback() {
+  const dispatch = useDispatch();
   const getPassUserDetail = useSelector((state) => state.getPassUserDetail);
   const [feedback, setfeedback] = useState(null);
   const SubmitFeedback = () => {
@@ -27,6 +29,7 @@ function Feedback() {
         .then((data) => {
           console.log(data);
           console.log("Feedback Submitted");
+          DefaultButton();
         })
         .catch((error) => {
           console.log(error);
@@ -36,7 +39,7 @@ function Feedback() {
 
   const handleChanges = (event) => {
     event.preventDefault();
-    const { value} = event.target;
+    const { value } = event.target;
     console.log(value);
     if (value != null) {
       setfeedback(value);

@@ -39,7 +39,7 @@ function Sidenav() {
         console.log(error);
       });
   }, []);
-  
+
   console.log(getUserDetail);
   return (
     <div className="sidenav-Container">
@@ -145,12 +145,14 @@ function Sidenav() {
               <FeedbackIcon />
             </IconButton>
           ) : (
-            <div class="Menu-withText">
+            <div
+              class="Menu-withText"
+              onClick={() => dispatch(feedbackButtonOn(getUserDetail))}
+            >
               <IconButton
                 edge="start"
                 color="inherit"
                 className="OptionIcon"
-                onClick={() => dispatch(feedbackButtonOn(getUserDetail))}
                 aria-label="menu"
               >
                 <FeedbackIcon />

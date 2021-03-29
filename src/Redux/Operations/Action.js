@@ -10,6 +10,7 @@ import { SHOWALLCUSTOMERSBUTTON } from "./Type";
 import { CUSTOMERBUYPACKAGEBUTTON } from "./Type";
 import { BUYPACKAGESCUSTOMERLISTBUTTON } from "./Type";
 import { SNACKBARBUTTON } from "./Type";
+import { DEFAULTBUTTON } from "./Type";
 
 export const sideNavStatus = () => {
   return {
@@ -88,3 +89,9 @@ export const SnackBarButton = (data) => {
     message: data,
   };
 };
+
+export const DefaultButton = () => {
+  return {
+    type: DEFAULTBUTTON,
+  };
+}

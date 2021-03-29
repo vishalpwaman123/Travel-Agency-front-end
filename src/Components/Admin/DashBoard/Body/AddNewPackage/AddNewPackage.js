@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddNewPackage.scss";
+import "./AddNewPackage.css";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import User_service from "../../../../../Services/UserServices";
@@ -70,62 +70,6 @@ function AddNewPackage() {
       setdetailFlag(false);
     }
 
-    // if (imageInput1 != constImage && detailFlag == true) {
-    //   const user = {
-    //     package_Image1: imageInput1,
-    //     type: "imageInput1",
-    //   };
-    //   userServices
-    //     .AddPackageImage(user)
-    //     .then((data) => {
-    //       console.log(data);
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // }
-    // if (imageInput2 != constImage && detailFlag == true) {
-    //   const user = {
-    //     package_Image2: imageInput2,
-    //     type: "imageInput2",
-    //   };
-    //   userServices
-    //     .AddPackageImage(user)
-    //     .then((data) => {
-    //       console.log(data);
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // }
-    // if (imageInput3 != constImage && detailFlag == true) {
-    //   const user = {
-    //     package_Image3: imageInput3,
-    //     type: "imageInput3",
-    //   };
-    //   userServices
-    //     .AddPackageImage(user)
-    //     .then((data) => {
-    //       console.log(data);
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // }
-    // if (imageInput4 != constImage && detailFlag == true) {
-    //   const user = {
-    //     package_Image4: imageInput4,
-    //     type: "imageInput4",
-    //   };
-    //   userServices
-    //     .AddPackageImage(user)
-    //     .then((data) => {
-    //       console.log(data);
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // }
     if (detailFlag === true) {
       const user = {
         package_Image1: imageInput1,

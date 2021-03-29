@@ -1,0 +1,233 @@
+.AddNewPackage-Container {
+	 height: 100%;
+	 width: 100%;
+}
+ .AddNewPackage-Container .sub-Container {
+	 height: 100%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain {
+	 height: 100%;
+	 width: 65%;
+	 border: 0.5px solid lightgray;
+	 box-sizing: border-box;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .image1 {
+	 height: 70%;
+	 width: 100%;
+	 border: 0.5px solid lightgray;
+	 box-sizing: border-box;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .image1 .display {
+	 height: fit-content;
+	 width: fit-content;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height: 80%;
+	 width: 100%;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .image1 .display .img1 {
+	 height: 95%;
+	 width: 60%;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .image1 .imageInput1 {
+	 height: 20%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images {
+	 display: flex;
+	 justify-content: none;
+	 align-items: none;
+	 height: 30%;
+	 width: 100%;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image2 {
+	 height: 100%;
+	 width: 33.34%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 border: 0.5px solid lightgray;
+	 box-sizing: border-box;
+	 flex-direction: column;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image2 .display {
+	 height: fit-content;
+	 width: fit-content;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image2 .display .img1 {
+	 height: 80%;
+	 width: 70%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image2 .imageInput2 {
+	 height: 20%;
+	 width: 50%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image3 {
+	 height: 100%;
+	 width: 33.33%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 border: 0.5px solid lightgray;
+	 box-sizing: border-box;
+	 flex-direction: column;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image3 .display {
+	 height: fit-content;
+	 width: fit-content;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image3 .display .img1 {
+	 height: 80%;
+	 width: 70%;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image3 .imageInput3 {
+	 height: 20%;
+	 width: 50%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image4 {
+	 height: 100%;
+	 width: 33.33%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 border: 0.5px solid lightgray;
+	 box-sizing: border-box;
+	 flex-direction: column;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image4 .display {
+	 height: fit-content;
+	 width: fit-content;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image4 .display .img1 {
+	 height: 80%;
+	 width: 70%;
+}
+ .AddNewPackage-Container .sub-Container .image-Contain .sub-images .image4 .imageInput4 {
+	 height: 20%;
+	 width: 50%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .package-detail {
+	 height: 100%;
+	 width: 35%;
+	 border: 0.5px solid lightgray;
+	 box-sizing: border-box;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .header {
+	 height: 10%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-Name {
+	 height: 20%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: none;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-Name .Text {
+	 height: 100%;
+	 width: 30%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-Name .Input {
+	 height: 100%;
+	 width: 70%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-Name .MuiTextField-root {
+	 width: 80%;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-description {
+	 height: 40%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: none;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-description .Text {
+	 height: 100%;
+	 width: 30%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-description .Input {
+	 height: 100%;
+	 width: 70%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-description .MuiTextField-root {
+	 width: 80%;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-price {
+	 height: 10%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: none;
+	 align-items: none;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-price .Text {
+	 height: 100%;
+	 width: 25%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-price .Input {
+	 height: 100%;
+	 width: 75%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .package-price .MuiTextField-root {
+	 width: 80%;
+}
+ .AddNewPackage-Container .sub-Container .package-detail .add-Button {
+	 height: 20%;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ 

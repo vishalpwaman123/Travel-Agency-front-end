@@ -1,3 +1,19 @@
+@mixin height_width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin border($length, $solid, $color, $border-box) {
+  border: $length $solid $color;
+  box-sizing: $border-box;
+}
+
+@mixin flex($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
 .mainContainer {
   background-color: #fff;
   align-items: center;
@@ -203,6 +219,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .figureBox {
+      @include height_width(100%, 100%);
+
+      .image {
+        @include height_width(100%, 100%);
+
+        .tempimage {
+          @include height_width(70%, 100%);
+        }
+      }
+    }
   }
 }
 
@@ -217,7 +245,7 @@
 .Font-style {
   font-family: Helvetica;
 }
-@media screen and (max-width: 755px)  {
+@media screen and (max-width: 755px) {
   .mainContainer {
     width: 100%;
     height: 700px;

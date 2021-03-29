@@ -1,6 +1,6 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
-import logo from "../../Asserts/logoRegister.svg";
+import logo from "../../Asserts/TravellingLogo.png";
 import "./Signup.scss";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -184,7 +184,7 @@ class Signup extends React.Component {
               <div className="image">
                 <img src={logo} class="tempimage" alt="Temperature" />
                 <figcaption className="figCaption">
-                  One account. All Our Management working for you.
+                  Jobs fill your pockets, adventures fill your soul.
                 </figcaption>
               </div>
             </div>

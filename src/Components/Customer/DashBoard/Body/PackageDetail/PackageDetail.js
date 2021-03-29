@@ -77,7 +77,7 @@ function PackageDetail() {
             <div className="Output">{PackagePassData.package_Destination}</div>
           </div>
           <div className="package_Discription">
-            <div className="Text">Desctiption : </div>
+            <div className="Text">Description : </div>
             <div className="Output">{PackagePassData.package_Discription}</div>
           </div>
           <div className="package_Price">

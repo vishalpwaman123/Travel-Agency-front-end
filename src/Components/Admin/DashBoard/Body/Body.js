@@ -40,7 +40,7 @@ function Body() {
               <div
                 className="show-All-Packages font-family"
                 onClick={() => dispatch(showAllPackagesButtonOn())}
-              > 
+              >
                 Show All Packages
               </div>
             </div>
@@ -83,7 +83,7 @@ function Body() {
           </div>
         ) : (
           <div className="default">
-            <h1>Welcome To Vishal Travelling Agency</h1>
+            <h1>Welcome To Swapnali Travelling Agency</h1>
           </div>
         )}
       </div>
